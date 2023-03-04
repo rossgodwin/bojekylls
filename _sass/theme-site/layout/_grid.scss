@@ -1,0 +1,9 @@
+.jkt-grid-item-body {
+	@include themify() {
+		padding: v(grid-item-padding);
+	}
+	
+	p {
+		margin-bottom: 0;
+	}
+}

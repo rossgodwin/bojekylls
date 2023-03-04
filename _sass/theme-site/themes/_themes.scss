@@ -1,0 +1,149 @@
+// https://medium.com/@sanuthadathil/theme-and-color-scheme-sass-way-a62d68614ef3
+// https://stackoverflow.com/questions/64390664/how-to-implement-switchable-themes-in-scss
+// https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
+// https://github.com/kaitlinmctigue/kaitlinmctigue.github.io/blob/source/src/styles/_color-themes.scss
+
+$themes: (
+	default: (
+		fontawesome-font-family: $font-fontAwesome5,
+		heading-color: #205ec9,
+		link-color: #205ec9,
+		text-small-color: #9a9c9a,
+		text-secondary-color: #6c757d,
+		badge-background-color: #001e45cc,
+		badge-color: $color-white,
+		small-device-page-header-height: 60px,
+		medium-device-page-header-height: 80px,
+		page-header-background-color: $color-white,
+		page-header-bottom-border-width: 1px,
+		page-header-bottom-border-style: solid,
+		page-header-bottom-border-color: #ccc,
+		page-header-menu-icon-color: #205ec9,
+		page-body-header-background-color: #fafafa,
+		page-body-left-padding: 16px,
+		page-body-right-padding: 16px,
+		page-footer-border-top-color: #205ec9,
+		page-footer-background-color: #fafafa,
+		page-footer-text-color: #8a8986,
+		page-preview-title-text-color: lighten(#292929, 40%),
+		button-background-color: #205ec9,
+		button-text-color: $color-white,
+		blockquote-background-color: #fafafa,
+		blockquote-border-color: #00000006,
+		blockquote-quote-border-color: #205ec9 transparent transparent transparent,
+		blockquote-quote-color: $color-white,
+		blockquote-footer-text-color: #6c757d,
+		panel-background-color: #fafafa,
+		panel-border-color: #00000006,
+		panel-border-style: solid,
+		panel-border-width: 2px,
+		form-searchfield-border-color: #fafafa,
+		form-searchfield-border-style: solid,
+		form-searchfield-border-width: 2px,
+		grid-item-border-width: 1px,
+		grid-item-border-style: solid,
+		grid-item-border-color: #d6d9dc,
+		grid-item-border-radius: 15px,
+		grid-item-box-shadow-offset-x: 0px,
+		grid-item-box-shadow-offset-y: 12px,
+		grid-item-box-shadow-blur-radius: 24px,
+		grid-item-box-shadow-spread-radius: 2px,
+		grid-item-box-shadow-color: #d6d9dc,
+		grid-item-image-width: 100%,
+		grid-item-image-border-style: none,
+		grid-item-image-border-top-left-radius: 7px,
+		grid-item-image-border-top-right-radius: 7px,
+		grid-item-padding: 1.5rem,
+		posts-article-author-avatar-size: 78px,
+		post-header-meta-text-color: lighten(#292929, 40%),
+		cv-heading-color: #205ec9,
+		cv-heading-section-border-bottom-color: #205ec9,
+		cv-social-icons-color: #205ec9,
+		cv-employer-name-text-color: #205ec9,
+		cv-project-name-text-color: #205ec9,
+		cv-education-school-text-color: #205ec9
+	)
+);
+
+@mixin themify() {
+	@each $theme, $map in $themes {
+		.jkt-theme-#{$theme} & {
+			$theme-map: () !global;
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), '#{$key}');
+				$theme-map: map-merge($theme-map, ($key: $value)) !global;
+			}
+			@content;
+			$theme-map: null !global;
+		}
+	}
+}
+
+@function v($key) {
+	@return map-get($theme-map, $key);
+}
+
+@mixin applyButtonStyle() {
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.375rem 1rem;
+	height: 2.75rem;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	text-decoration: none;
+	user-select: none;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	&:hover {
+		text-decoration: none;
+	}
+	@include themify() {
+		background: v(button-background-color);
+		color: v(button-text-color);
+	}
+	border-color: transparent;
+	font-size: 1rem;
+	padding-top: 0.5rem;
+	&:hover {
+		@include themify() {
+			background: v(button-text-color);
+			border-color: v(button-background-color);
+			color: v(button-background-color);
+		}
+	}
+}
+
+@mixin applyGridItemStyle() {
+	width: 100%;
+	margin-bottom: 20px;
+	
+	@include themify() {
+		border-width: v(grid-item-border-width);
+		border-style: v(grid-item-border-style);
+		border-color: v(grid-item-border-color);
+		border-radius: v(grid-item-border-radius);
+		box-shadow: v(grid-item-box-shadow-offset-x) v(grid-item-box-shadow-offset-y) v(grid-item-box-shadow-blur-radius) v(grid-item-box-shadow-spread-radius) v(grid-item-box-shadow-color);
+	}
+}
+
+@mixin applyGridItemImageHeaderStyle() {
+	> img {
+		@include themify() {
+			width: v(grid-item-image-width);
+			border-style: v(grid-item-image-border-style);
+			border-top-left-radius: v(grid-item-image-border-top-left-radius);
+			border-top-right-radius: v(grid-item-image-border-top-right-radius);
+		}
+		margin-bottom: 0px;
+	}
+}
+
+@mixin applyGridItemTextHeaderStyle() {
+	@include themify() {
+		padding-left: v(grid-item-padding);
+		padding-right: v(grid-item-padding);
+		padding-top: v(grid-item-padding);
+	}
+}

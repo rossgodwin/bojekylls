@@ -1,0 +1,9 @@
+{% assign _author = site.data.theme-site.seo.author %}
+{% if page.author %}
+	{% assign _author = page.author %}
+{% elsif layout.author %}
+	{% assign _author = layout.author %}
+{% endif %}
+{% if _author %}
+	<meta name="author" content="{{ _author }}" />
+{% endif %}

@@ -1,0 +1,21 @@
+{% if include.google-analytics-measurement-id != "" %}
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ include.google-analytics-measurement-id }}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', '{{ include.google-analytics-measurement-id }}');
+	</script>
+{% endif %}
+
+{% assign head-scripts = '' | split: '' %}
+{% if layout.head-scripts %}
+	{% assign head-scripts = head-scripts | push: layout.head-scripts %}
+{% endif %}
+{% if page.head-scripts %}
+	{% assign head-scripts = head-scripts | push: page.head-scripts %}
+{% endif %}
+{% for script in head-scripts %}
+	<script src="{{ script | relative_url }}"></script>
+{% endfor %}

@@ -1,0 +1,23 @@
+<div class="jkt-breadcrumbs">
+	{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+	<a href="/">Home</a>
+	{% for crumb in crumbs offset: 1 %}
+		{% if forloop.last %}
+			/ {{ page.title }}
+		{% else %}
+			{% assign i = forloop.index | plus: 1 %}
+			{% capture url %}
+				{% for crumb in crumbs limit: i %}{{ crumb | append: '/' }}{% endfor %}
+			{% endcapture %}
+			
+			{% assign title = crumb | replace: '-', ' ' | remove:'.html' %}
+			{% assign words = title | split: ' ' %}
+			{% capture titleCase %}
+				{% for word in words %}{{ word | capitalize }} {% endfor %}
+			{% endcapture %}
+			{% assign titleCase = titleCase | strip %}
+			
+			/ <a href="{{ url }}">{{ titleCase }}</a>
+		{% endif %}
+	{% endfor %}
+</div>

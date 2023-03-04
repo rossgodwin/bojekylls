@@ -1,0 +1,38 @@
+---
+layout: this-site/page
+---
+
+<section class="jkt-post">
+	<div class="jkt-post-image">
+		<img src="{{ page.image-path | relative_url }}" alt="{{ page.title }}" class="jkt-image-responsive">
+		{% if page.image-by-name %}
+			<div class="jkt-badge jkt-position-bottom-right">Image Credit: <a href="{{ page.image-credit-url }}" target="_blank" class="jkt-link">{{ page.image-by-name }}</a></div>
+		{% endif %}
+	</div>
+	<header>
+		<h2 class="jkt-heading-vertical-bar">{{ page.title | escape }}</h2>
+		<div class="jkt-post-header-meta">
+			Published:&nbsp;{{ page.date | date: "%b %-d, %Y" }}
+			{% if page.tags %}
+				<br>
+				<span>Tags:&nbsp;
+				{% for tag in page.tags %}
+					<a href="{{ tag | prepend: 'tags/#' | relative_url }}">{{ tag }}</a>&nbsp;
+				{% endfor %}
+				</span>
+			{% endif %}
+			
+			<hr>
+		</div>
+	</header>
+	<div class="jkt-post-body">
+		{% assign gallery = page.galleries[0] %}
+		{% if gallery %}
+			<section class="jkt-panel jkt-post-thumbnails" style="{% if page.thumbnail-gallery-width %}width: {{ page.thumbnail-gallery-width }};{% endif %}">
+				{% include theme-core/components/gallery/thumbnails.html gallery=gallery %}
+			</section>
+		{% endif %}
+		
+		{{ content }}
+	</div>
+</section>

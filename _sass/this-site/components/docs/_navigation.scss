@@ -1,0 +1,18 @@
+.jkt-docs-navigation {
+	margin-top: 10px;
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 16px;
+	}
+	
+	a.active {
+		font-weight: bold;
+	}
+}
+
+.jkt-docs-navigation-primary-title {
+	text-transform: uppercase;
+}

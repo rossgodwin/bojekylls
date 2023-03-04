@@ -1,0 +1,24 @@
+title: Bojekylls
+
+height: 40px
+
+logo:
+  image-relative-url: assets/theme-site/images/site-navbar/logo.png
+  relative-url: /
+
+menu:
+  - title: Blog
+    relative-url: #
+    menu:
+      - title: Posts
+        relative-url: /
+        icon-relative-url: assets/theme-site/images/site-navbar/construction.png
+        description: View all blog posts.
+      - title: Demo
+        relative-url: demo
+        icon-relative-url: assets/theme-site/images/site-navbar/information-technology.png
+        description: View posts that demonstrate available site features.
+  - title: About
+    relative-url: about
+  - title: Quick-Start-Guide
+    relative-url: docs/quick-start-guide

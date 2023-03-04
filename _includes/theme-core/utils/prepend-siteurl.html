@@ -1,0 +1,6 @@
+{% include theme-core/utils/prepend-baseurl.html path=include.url %}
+{% assign post-url = __return %}
+{% include theme-core/utils/prepend-path.html
+	path=post-url
+	prepend_path=site.url
+%}

@@ -1,0 +1,9 @@
+destination: _site
+url: 'http://127.0.0.1:4000'
+baseurl: ''
+
+# Analytics
+google_analytics_measurement_id: ''
+
+sass:
+  style: :expanded

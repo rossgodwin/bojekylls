@@ -1,0 +1,76 @@
+<footer class="jkt-page-footer">
+	<div class="jkt-page-footer-wrapper">
+		<div class="jkt-page-footer-icon-links">
+			<ul>
+				{% if site.data.theme-site.me.email-address %}
+					<li>
+						<a href="emailto:{{ site.data.theme-site.me.email-address }}" class="jkt-icon-link" target="_blank">
+							{% include theme-core/components/icons/fa/email-circle-icon.html fa-x=2 %}
+						</a>
+					</li>
+				{% endif %}
+				{% if site.data.theme-site.me.social.linkedin %}
+					<li>
+						<a href="{{ site.data.theme-site.me.social.linkedin.url }}" class="jkt-icon-link" target="_blank">
+							{% include theme-core/components/icons/fa/linkedin-circle-icon.html fa-x=2 %}
+						</a>
+					</li>
+				{% endif %}
+				{% if site.data.theme-site.me.social.twitter %}
+					<li>
+						<a href="{{ site.data.theme-site.me.social.twitter.url }}" class="jkt-icon-link" target="_blank">
+							{% include theme-core/components/icons/fa/twitter-circle-icon.html fa-x=2 %}
+						</a>
+					</li>
+				{% endif %}
+				{% if site.data.theme-site.me.social.instagram %}
+					<li>
+						<a href="{{ site.data.theme-site.me.social.instagram.url }}" class="jkt-icon-link" target="_blank">
+							{% include theme-core/components/icons/fa/instagram-circle-icon.html fa-x=2 %}
+						</a>
+					</li>
+				{% endif %}
+				{% if site.data.theme-site.me.social.facebook %}
+					<li>
+						<a href="{{ site.data.theme-site.me.social.facebook.url }}" class="jkt-icon-link" target="_blank">
+							{% include theme-core/components/icons/fa/facebook-circle-icon.html fa-x=2 %}
+						</a>
+					</li>
+				{% endif %}
+				{% if site.data.theme-site.me.social.github %}
+					<li>
+						<a href="{{ site.data.theme-site.me.social.github.url }}" class="jkt-icon-link" target="_blank">
+							{% include theme-core/components/icons/fa/github-circle-icon.html fa-x=2 %}
+						</a>
+					</li>
+				{% endif %}
+			</ul>
+		</div>
+		
+		{% if site.data.theme-site.page-footer.text-links %}
+			<div class="jkt-page-footer-text-links">
+				<ul>
+					{% for link in site.data.theme-site.page-footer.text-links %}
+						<li>
+							{% include theme-core/components/text-link.html link=link %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+		
+		<hr>
+		
+		{% if site.data.theme-site.page-footer.line1-html %}
+			<div class="jkt-page-footer-line1">
+				{{ site.data.theme-site.page-footer.line1-html }}
+			</div>
+		{% endif %}
+		
+		{% if site.data.theme-site.page-footer.line2-html %}
+			<div class="jkt-page-footer-line2">
+				{{ site.data.theme-site.page-footer.line2-html }}
+			</div>
+		{% endif %}
+	</div>
+</footer>

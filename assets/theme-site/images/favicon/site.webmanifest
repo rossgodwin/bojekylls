@@ -1,0 +1,22 @@
+---
+---
+{% assign path = site.data.favicon.image-folder-path %}
+{
+    "name": "",
+    "short_name": "",
+    "icons": [
+        {
+            "src": "{{ path | append: 'android-chrome-192x192.png' | relative_url }}",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "{{ path | append: 'android-chrome-256x256.png' | relative_url }}",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "{{ '#' | append: site.data.favicon.theme-hex-color }}",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

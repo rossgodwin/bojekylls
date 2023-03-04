@@ -1,0 +1,9 @@
+---
+layout: this-site/page
+---
+
+{% capture _sidebar-content %}
+	{% include this-site/components/docs/navigation.html %}
+{% endcapture %}
+
+{% include theme-site/layout/sticky-sidebar.html sidebar-content=_sidebar-content %}

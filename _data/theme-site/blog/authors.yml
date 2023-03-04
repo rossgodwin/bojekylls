@@ -1,0 +1,6 @@
+authors:
+  - id: 1
+    name: John Doe
+  - id: 2
+    name: Joe Smith
+    avatar-relative-url: assets/theme-site/images/authors/joe-smith/avatar.png

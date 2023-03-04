@@ -1,0 +1,26 @@
+.jkt-link {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.jkt-link-arrow {
+	&:after {
+		content: "\2192";
+	}
+}
+
+// TODO: remove and use jkt-link
+.jkt-icon-link {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin styleLinkApplySameColorToAllStates($color) {
+	a:link, a:visited, a:hover, a:active {
+		color: $color;
+	}
+}

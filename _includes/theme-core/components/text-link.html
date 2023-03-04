@@ -1,0 +1,9 @@
+{% if include.link.relative-url %}
+	{% assign _url = include.link.relative-url | relative_url %}
+{% elsif include.link.external-url %}
+	{% assign _url = include.link.external-url %}
+{% endif %}
+
+<a href="{{ _url }}"{% if include.link.target %} target="{{ include.link.target }}"{% endif %}>
+	{{ include.link.text }}
+</a>

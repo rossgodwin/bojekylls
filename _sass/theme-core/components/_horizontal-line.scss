@@ -1,0 +1,17 @@
+.jkt-hr-gradient-divider {
+	position: relative;
+	
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		display: block;
+		margin-left: -40%;
+		width: 80%;
+		content: '';
+		@include themify() {
+			height: v(hr-gradient-divider-height);
+			background: radial-gradient(ellipse at center, v(hr-gradient-divider-start-color) 0, v(hr-gradient-divider-finish-color) 75%);
+		}
+	}
+}

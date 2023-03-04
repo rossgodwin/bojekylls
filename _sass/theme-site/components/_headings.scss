@@ -1,0 +1,25 @@
+.jkt-heading {
+	@extend .jkt-heading;
+	@include themify() {
+		color: v(heading-color);
+	}
+}
+
+.jkt-heading-vertical-bar {
+	@extend .jkt-heading-vertical-bar;
+	&:before {
+		@include themify() {
+			background: v(heading-color);
+		}
+   }
+}
+
+.jkt-heading-line-separator {
+	@extend .jkt-heading-line-separator;
+	&:before,
+	&:after {
+		@include themify() {
+			border-top-color: v(heading-color);
+		}
+	}
+}

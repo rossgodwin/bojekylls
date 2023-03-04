@@ -1,0 +1,137 @@
+# theme: jekyll-jkt-commons
+
+# Site wide configuration
+destination: docs
+url: 'https://rossgodwin.github.io/bojekylls'
+baseurl: ''
+lang: en
+
+# Analytics
+google_analytics_measurement_id: ''
+
+# Jekyll configuration
+show_drafts: false
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+include:
+  - _pages
+exclude:
+  - .bundle
+  - .jekyll-cache
+  - .gitignore
+  - .project
+  - _drafts
+  - docs/
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-bojekylls-1.0.gem
+  - jekyll-theme-bojekylls.gemspec
+  - README.md
+  - vendor/bundle/
+
+excerpt_separator: <!--more-->
+
+sass:
+  style: :compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+collections_dir: collections
+collections:
+  blog-information-technology:
+    output: true
+    permalink: /blog/information-technology/:path/
+  about-construction-projects:
+    output: true
+    permalink: /about/construction/projects/:path/
+  demo:
+    output: true
+    permalink: /demo/:path/
+  explains:
+    output: true
+    permalink: /explains/:path/
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Plugins
+gems:
+  - jekyll-feed
+  - jekyll-liquify
+
+plugins:
+  - jekyll-gist
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      include-seo: false
+      include-seo-og: false
+  - scope:
+      path: blog/*
+    values:
+      include-seo: true
+  - scope:
+      path: _pages
+    values:
+      include-seo: false
+  - scope:
+      type: demo
+    values:
+      include-seo: true
+      categories: [demo]
+  - scope:
+      type: docs
+    values:
+      layout: this-site/doc
+      sitemap: false
+      include-seo: false
+      categories: [documentation]
+  - scope:
+      path: assets/*
+    values:
+      sitemap: false
+
+# Plugin: Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/:num/'
+  title: ':title | :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail: 
+    before: 2
+    after: 2
+
+# Plugin: Auto Pages (jekyll-paginate-v2)
+autopages:
+  enabled: true
+  tags:
+    enabled: false
+    layouts:
+      - autopage_tags.html
+    permalink: /tag/:tag
+  categories:
+    enabled: false
+    layouts:
+      - autopage_category.html
+  collections:
+    enabled: false
+    slugify:
+      mode: 'ascii'
+      cased: true

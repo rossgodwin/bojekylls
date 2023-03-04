@@ -1,0 +1,22 @@
+.jkt-page-header {
+	grid-area: h;
+	@include themify() {
+		background-color: v(page-header-background-color);
+		border-bottom-style: v(page-header-bottom-border-style);
+		border-bottom-width: v(page-header-bottom-border-width);
+		border-bottom-color: v(page-header-bottom-border-color);
+	}
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.jkt-page-header {
+		@include themify() {
+			height: v(medium-device-page-header-height);
+		}
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+	}
+}

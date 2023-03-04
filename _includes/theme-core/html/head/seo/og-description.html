@@ -1,0 +1,15 @@
+{% assign _og-description = site.data.theme-site.seo.og-description %}
+{% if page.og-description %}
+	{% assign _og-description = page.og-description %}
+{% elsif layout.og-description %}
+	{% assign _og-description = layout.og-description %}
+{% elsif page.description %}
+	{% assign _og-description = page.description %}
+{% elsif page.excerpt %}
+	{% assign _og-description = page.excerpt | strip_html %}
+{% elsif layout.description %}
+	{% assign _og-description = layout.description %}
+{% endif %}
+{% if _og-description %}
+	<meta name="og:description" content="{{ _og-description }}" />
+{% endif %}

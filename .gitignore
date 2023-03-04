@@ -1,0 +1,6 @@
+/vendor/
+/Gemfile.lock
+/jekyll-theme-bojekylls-1.0.gem
+/.project
+/.bundle/
+/.settings/

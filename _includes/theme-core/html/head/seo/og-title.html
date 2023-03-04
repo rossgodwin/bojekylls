@@ -1,0 +1,12 @@
+{% assign _og-title = site.data.theme-site.seo.og-title %}
+{% if page.og-title %}
+	{% assign _og-title = page.og-title %}
+{% elsif layout.og-title %}
+	{% assign _og-title = layout.og-title %}
+{% else %}
+	{% include theme-core/utils/get-page-title.html %}
+	{% assign _og-title = __return %}
+{% endif %}
+{% if _og-title %}
+	<meta name="og:title" content="{{ _og-title }}" />
+{% endif %}

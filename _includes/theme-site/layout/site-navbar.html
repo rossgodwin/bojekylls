@@ -1,0 +1,33 @@
+<div class="jkt-site-navbar">
+	<div class="jkt-site-navbar-logo">
+		<a href="{{ site.data.theme-site.site-navbar.logo.relative-url | relative_url }}"><img src="{{ site.data.theme-site.site-navbar.logo.image-relative-url | relative_url }}" alt="{{ site.data.theme-site.site-navbar.title }}"></a>
+	</div>
+	
+	<button class="jkt-site-navbar-menu-toggler" type="button" aria-label="Toggle navigation">
+		<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+	</button>
+	
+	<nav class="jkt-site-navbar-menu">
+		<ul>
+			{% for item in site.data.theme-site.site-navbar.menu %}
+				<li class="jkt-site-navbar-menu-item{% if item.menu %} jkt-site-navbar-menu-dropdown{% endif %}">
+					<a href="{% if item.menu %}#{% else %}{{ item.relative-url | relative_url }}{% endif %}" class="jkt-icon-link{% if item.menu %} jkt-site-navbar-menu-dropdown-trigger{% endif %}"><span class="jkt-site-navbar-text">{{ item.title }}</span></a>
+					{% if item.menu %}
+						<div class="jkt-site-navbar-dropdown-menu">
+							<div class="jkt-site-navbar-dropdown-menu-panel">
+								{% for s-item in item.menu %}
+									<a href="{{ s-item.relative-url | relative_url }}"><img src="{{ s-item.icon-relative-url | relative_url }}" alt="{{ s-item.title }}"></a>
+									<div>
+										<a href="{{ s-item.relative-url | relative_url }}" class="jkt-icon-link"><span class="jkt-site-navbar-text">{{ s-item.title }}</span></a>
+										<br/>
+										<span class="jkt-text-small">{{ s-item.description }}</span>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+</div>

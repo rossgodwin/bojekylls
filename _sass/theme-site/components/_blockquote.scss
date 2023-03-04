@@ -1,0 +1,24 @@
+.jkt-blockquote {
+	@extend .jkt-blockquote;
+	@include themify() {
+		background: v(blockquote-background-color);
+		border-color: v(blockquote-border-color);
+	}
+	&:before {
+		@include themify() {
+			border-color: v(blockquote-quote-border-color);
+		}
+	}
+	
+	.fa-quote-left {
+		@include themify() {
+			color: v(blockquote-quote-color);
+		}
+	}
+	
+	footer {
+		@include themify() {
+			color: v(blockquote-footer-text-color);
+		}
+	}
+}

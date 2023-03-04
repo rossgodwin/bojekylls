@@ -1,0 +1,7 @@
+<div id="{{ include.gallery.id }}">
+	{% for image in include.gallery.images %}
+		<a href="{{ image.url | relative_url }}"{% if image.html_content %} data-sub-html="{{ image.html_content }}"{% endif %}>
+			<img src="{{ image.thumbnail_url | relative_url }}" />
+		</a>
+	{% endfor %}
+</div>

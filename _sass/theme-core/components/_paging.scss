@@ -1,0 +1,24 @@
+.jkt-paging-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.jkt-paging-button-primary {
+	@include themify() {
+		margin-right: v(button-icon-text-spacing);
+	}
+}
+
+.jkt-paging-button-selected {
+	text-decoration: underline !important;
+}
+
+.jkt-button-paging-previous {
+	@extend .jkt-paging-button-primary;
+	padding-right: 1rem;
+}
+
+.jkt-paging-button-next {
+	@extend .jkt-paging-button-primary;
+	padding-left: 1rem;
+}

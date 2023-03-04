@@ -1,0 +1,5 @@
+{% assign _include_path_replace_index = include.path | replace: 'index.html', '' %}
+{% include theme-core/utils/prepend-path.html
+	path=_include_path_replace_index
+	prepend_path=site.baseurl
+%}

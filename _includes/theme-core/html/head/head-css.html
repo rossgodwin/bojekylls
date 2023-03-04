@@ -1,0 +1,36 @@
+{% assign head-csss = '' | split: '' %}
+
+{% if page.include-highlightjs %}
+	{% assign head-csss = head-csss | push: 'assets/theme-core/lib/highlightjs/css/monokai-sublime.min.css' %}
+{% endif %}
+
+{% if page.galleries %}
+	{% assign head-csss = head-csss | push: 'assets/theme-core/lib/justifiedgallery/css/justifiedGallery.min.css' %}
+	{% assign head-csss = head-csss | push: 'assets/theme-core/lib/lightgallery/css/lightgallery.min.css' %}
+{% endif %}
+
+{% if layout.head-csss %}
+	{% assign head-csss = head-csss | push: layout.head-csss %}
+{% endif %}
+{% if page.head-csss %}
+	{% assign head-csss = head-csss | push: page.head-csss %}
+{% endif %}
+
+{% assign head-csss = head-csss | uniq %}
+{% for css in head-csss %}
+    <link rel="stylesheet" type="text/css" href="{{ css | relative_url }}">
+{% endfor %}
+
+{% assign print-csss = '' | split: '' %}
+
+{% if layout.head-print-csss %}
+	{% assign print-csss = print-csss | push: layout.head-print-csss %}
+{% endif %}
+{% if page.head-print-csss %}
+	{% assign print-csss = print-csss | push: page.head-print-csss %}
+{% endif %}
+
+{% assign print-csss = print-csss | uniq %}
+{% for css in print-csss %}
+	<link rel="stylesheet" type="text/css" href="{{ css | relative_url }}" media="print">
+{% endfor %}

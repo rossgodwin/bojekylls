@@ -1,0 +1,13 @@
+email-address: john.doe@gmail.com
+
+social:
+  linkedin:
+    url: https://www.linkedin.com/company/linkedin
+  github:
+    url: https://github.com/github
+  twitter:
+    url: https://twitter.com/twitter
+  instagram:
+    url: https://www.instagram.com/instagram
+  facebook:
+    url: https://www.facebook.com/facebook

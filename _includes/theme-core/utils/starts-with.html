@@ -1,0 +1,10 @@
+{% assign stringToCheck = include.string %}
+{% assign startsWith = include.starts-with %}
+{% assign checkArray = stringToCheck | split:startsWith %}
+{% assign zeroIndexSize = checkArray[0] | size %}
+
+{% if checkArray[0] == blank or checkArray[0] == '' or zeroIndexSize == 0 %}
+	{% assign __return = true %}
+{% else %}
+	{% assign __return = false %}
+{% endif %}

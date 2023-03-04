@@ -1,0 +1,21 @@
+.jkt-page {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: minmax(0, 1fr); // prevent grid blowout i.e. when embedding a gist in the grid
+	grid-template-areas:
+		// h = header
+		// c = content
+		// f = footer
+		"h"
+		"c"
+		"f";
+	height: 100vh;
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.jkt-page {
+		@include themify() {
+			grid-template-rows: v(medium-device-page-header-height) 1fr auto;
+		}
+	}
+}

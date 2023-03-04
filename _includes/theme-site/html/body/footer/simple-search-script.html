@@ -1,0 +1,24 @@
+<!-- Include in $(document).ready() -->
+{% if page.simple-searches %}
+	{% for search in page.simple-searches %}
+		{% capture create-instance %}
+			window.{{ search.search-id }} = SimpleJekyllSearch({
+				searchInput: document.getElementById('{{ search.search-textfield-id }}'),
+				resultsContainer: document.getElementById('{{ search.search-results-container-id }}'),
+				json: '{{ search.search-json-datasource-file-relative-url }}',
+				searchResultTemplate: '{{ search.search-results-template-html }}',
+				sortMiddleware: {{ search.search-sort-function }}
+			})
+		{% endcapture %}
+
+		{{ create-instance }}
+
+		{% capture load-results %}
+			setTimeout(() => {
+				window.{{ search.search-id }}.noSearch()
+			}, 1000)
+		{% endcapture %}
+		
+		{{ load-results }}
+	{% endfor %}
+{% endif %}

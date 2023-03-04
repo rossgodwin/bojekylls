@@ -1,0 +1,17 @@
+.jkt-button-left-icon {
+	@include themify() {
+		margin-right: v(button-icon-text-spacing);
+	}
+}
+
+.jkt-button-right-icon {
+	@include themify() {
+		margin-left: v(button-icon-text-spacing);
+	}
+}
+
+.jkt-paging-buttons {
+	a {
+	    @extend .jkt-button;
+	}
+}

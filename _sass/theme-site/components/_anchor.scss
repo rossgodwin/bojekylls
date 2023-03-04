@@ -1,0 +1,21 @@
+.jkt-anchor {
+	display: block;
+	position: relative;
+	visibility: hidden;
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.jkt-anchor {
+		@include themify() {
+			top: calc(#{v(medium-device-page-header-height)} * -1);
+		}
+	}
+}
+
+@media (min-width: $device-width-breakpoint-large) {
+	.jkt-anchor {
+		@include themify() {
+			top: calc(#{v(large-device-page-header-height)} * -1);
+		}
+	}
+}
