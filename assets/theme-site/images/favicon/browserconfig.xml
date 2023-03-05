@@ -1,11 +1,9 @@
----
----
 <?xml version="1.0" encoding="utf-8"?>
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="{{ site.data.favicon.image-folder-path | append: 'mstile-150x150.png' | relative_url }}"/>
-            <TileColor>{{ '#' | append: site.data.favicon.windows-tile-hex-color }}</TileColor>
+            <square150x150logo src="/assets/theme-site/images/favicon/mstile-150x150.png"/>
+            <TileColor>#da532c</TileColor>
         </tile>
     </msapplication>
 </browserconfig>
