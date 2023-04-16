@@ -1,0 +1,50 @@
+---
+layout: theme-site/hbf-page/page-single_column
+---
+
+{% capture _items-content %}
+	{% for post in paginator.posts %}
+		{% assign collection = post-url-array[post-url-array-index] | capitalize | replace: "-", " " %}
+		{% assign authors-where-exp = post.author-id | append: '' | prepend: 'item.id == ' %}
+		{% assign author = site.data.theme-site.blog.authors.authors | where_exp: 'item', authors-where-exp | first %}
+		
+		{% include theme-core/utils/prepend-baseurl.html path=post.url %}
+		{% assign post-url = __return %}
+		{% assign post-url-array = post-url | remove:'/index.html' | split: '/' | compact %}
+		{% assign post-url-array-index = post-url-array.size | minus: 2 %}
+		{% assign category = post-url-array[post-url-array-index] | capitalize | replace: "-", " " %}
+		
+		{% if post.description %}
+			{% assign post-description = post.description %}
+		{% else if post.excerpt %}
+			{% assign post-description = post.excerpt %}
+		{% endif %}
+		
+		<div class="jkt-mgrid-3c-item jkt-posts-grid-item">
+			<div class="jkt-margin-align-horizontal-right jkt-text-align-horizontal-right">
+				{% if post.image-path %}
+					<img src="{{ post.image-path | relative_url }}" alt="{{ post.title }}">
+				{% endif %}
+				<div class="jkt-badge jkt-badge-color-blue-midnight{% if post.image-path %} jkt-position-top-right{% endif%} jkt-text-uppercase">{{ category }}</div>
+			</div>
+			<div class="jkt-posts-article-body">
+				<h5><a href="{{ post-url }}">{{ post.title }}</a></h5>
+				<p>
+					{{ post-description | strip_html }}
+				</p>
+			</div>
+			<div class="jkt-posts-article-footer jkt-posts-article-top-delimiter">
+				{% if author.avatar-relative-url %}
+					<div class="jkt-posts-article-author-avatar">
+						<img src="{{ author.avatar-relative-url | relative_url }}" alt="{{ post.title }}">
+					</div>
+				{% endif %}
+				<span>{{ author.name }}&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+			</div>
+		</div>
+	{% endfor %}
+{% endcapture %}
+
+{% include theme-core/layout/3c-mgrid.html items-content=_items-content %}
+
+{% include theme-core/components/list/paging-buttons.html %}

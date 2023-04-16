@@ -25,10 +25,8 @@ $padding: 20px;
 
 .jkt-posts-article-author-avatar {
 	img {
-		@include themify() {
-			width: v(posts-article-author-avatar-size);
-			height: v(posts-article-author-avatar-size);
-		}
+		width: 78px;
+		height: 78px;
 		border-radius: 50%;
 	}
 }

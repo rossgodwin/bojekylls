@@ -1,5 +1,5 @@
 ---
-layout: theme-site/blog/post
+layout: theme-site/hbf-page/post
 author-id: 2
 title: Post with Author Picture
 include-seo: true

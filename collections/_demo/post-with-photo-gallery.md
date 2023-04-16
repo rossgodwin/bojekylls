@@ -1,5 +1,5 @@
 ---
-layout: theme-site/blog/post
+layout: theme-site/hbf-page/post
 author-id: 1
 title: Post with Photo Gallery
 include-seo: true
@@ -62,6 +62,6 @@ To do this you will need to add the photo and corresponding thumbnail urls under
 <a class="jkt-button" href="#" id="dynamic-demo">Launch Gallery</a>
 
 {% assign gallery = page.galleries[2] %}
-<section class="jkt-panel jkt-post-thumbnails" style="width: 450px">
+<section class="jkt-panel-gray jkt-post-thumbnails" style="width: 450px">
 	{% include theme-core/components/gallery/thumbnails.html gallery=gallery %}
 </section>

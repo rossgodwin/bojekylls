@@ -1,36 +1,45 @@
-{% assign head-csss = '' | split: '' %}
+{% assign head-css-external-urls = '' | split: '' %}
+
+{% assign head-css-external-urls = head-css-external-urls | uniq %}
+{% for css in head-css-external-urls %}
+    <link rel="stylesheet" type="text/css" href="{{ css }}">
+{% endfor %}
+
+{% assign head-css-relative-urls = '' | split: '' %}
+
+{% assign head-css-relative-urls = head-css-relative-urls | push: 'assets/theme-core/lib/aos-3.0.0-beta.6/css/aos.css' %}
 
 {% if page.include-highlightjs %}
-	{% assign head-csss = head-csss | push: 'assets/theme-core/lib/highlightjs/css/monokai-sublime.min.css' %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: 'assets/theme-core/lib/highlightjs/css/monokai-sublime.min.css' %}
 {% endif %}
 
 {% if page.galleries %}
-	{% assign head-csss = head-csss | push: 'assets/theme-core/lib/justifiedgallery/css/justifiedGallery.min.css' %}
-	{% assign head-csss = head-csss | push: 'assets/theme-core/lib/lightgallery/css/lightgallery.min.css' %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: 'assets/theme-core/lib/justifiedgallery/css/justifiedGallery.min.css' %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: 'assets/theme-core/lib/lightgallery/css/lightgallery.min.css' %}
 {% endif %}
 
-{% if layout.head-csss %}
-	{% assign head-csss = head-csss | push: layout.head-csss %}
+{% if layout.head-css-relative-urls %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: layout.head-css-relative-urls %}
 {% endif %}
-{% if page.head-csss %}
-	{% assign head-csss = head-csss | push: page.head-csss %}
+{% if page.head-css-relative-urls %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: page.head-css-relative-urls %}
 {% endif %}
 
-{% assign head-csss = head-csss | uniq %}
-{% for css in head-csss %}
+{% assign head-css-relative-urls = head-css-relative-urls | uniq %}
+{% for css in head-css-relative-urls %}
     <link rel="stylesheet" type="text/css" href="{{ css | relative_url }}">
 {% endfor %}
 
-{% assign print-csss = '' | split: '' %}
+{% assign print-css-relative-urls = '' | split: '' %}
 
-{% if layout.head-print-csss %}
-	{% assign print-csss = print-csss | push: layout.head-print-csss %}
+{% if layout.head-print-css-relative-urls %}
+	{% assign print-css-relative-urls = print-css-relative-urls | push: layout.head-print-css-relative-urls %}
 {% endif %}
-{% if page.head-print-csss %}
-	{% assign print-csss = print-csss | push: page.head-print-csss %}
+{% if page.head-print-css-relative-urls %}
+	{% assign print-css-relative-urls = print-css-relative-urls | push: page.head-print-css-relative-urls %}
 {% endif %}
 
-{% assign print-csss = print-csss | uniq %}
-{% for css in print-csss %}
+{% assign print-css-relative-urls = print-css-relative-urls | uniq %}
+{% for css in print-css-relative-urls %}
 	<link rel="stylesheet" type="text/css" href="{{ css | relative_url }}" media="print">
 {% endfor %}

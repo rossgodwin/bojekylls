@@ -1,3 +1,35 @@
 .jkt-button {
-	@include applyButtonStyle();
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.375rem 1rem;
+	height: 2.75rem;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	text-decoration: none;
+	user-select: none;
+	&:hover {
+		text-decoration: none;
+	}
+	border-color: transparent;
+	font-size: 1rem;
+	padding-top: 0.5rem;
+}
+
+.jkt-button-outline-blue {
+	@include makeOutlineButton($color-white, $color-blue, 2px);
+}
+
+.jkt-button-solid-blue {
+	@include makeSolidButton($color-blue, $color-white ,2px);
+}
+
+.jkt-button-outline-green {
+	@include makeOutlineButton($color-white, $color-green-lime, 2px);
+}
+
+.jkt-button-solid-green {
+	@include makeSolidButton($color-green-lime, $color-white, 2px);
 }

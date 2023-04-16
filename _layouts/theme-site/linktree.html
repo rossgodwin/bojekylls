@@ -1,0 +1,15 @@
+---
+layout: theme-site/default
+---
+
+<div class="jkt-linktree-page jkt-layout-reel">
+	<div class="jkt-linktree-page-header">
+		<a href="{{ site.data.theme-site.linktree.logo.relative-url | relative_url }}">
+			<img src="{{ site.data.theme-site.linktree.logo.image-relative-url | relative_url }}" alt="{{ site.data.theme-site.site-navbar.title }}">
+		</a>
+		<span class="jkt-text-small">{{ site.data.theme-site.linktree.subtitle }}</span>
+	</div>
+	<div class="jkt-linktree-page-body jkt-margin-align-horizontal-center">
+		{% include theme-site/layout/linktree-links.html %}
+	</div>
+</div>

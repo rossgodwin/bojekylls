@@ -1,11 +1,11 @@
 .jkt-form-searchfield {
-	font-family: $font-Segeo;
+	font-family: $font-segeo;
 	background-color: $color-white;
 	@include themify() {
 		border-color: v(form-searchfield-border-color);
-		border-style: v(form-searchfield-border-style);
-		border-width: v(form-searchfield-border-width);
 	}
+	border-style: solid;
+	border-width: 2px;
 	background-image: url($site-baseurl + '/assets/theme-site/images/icons/search.png');
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
@@ -14,8 +14,8 @@
 	&:focus {
 		@include themify() {
 			border-color: v(form-searchfield-border-color);
-			border-style: v(form-searchfield-border-style);
-			border-width: v(form-searchfield-border-width);
 		}
+		border-style: solid;
+		border-width: 2px;
 	}
 }

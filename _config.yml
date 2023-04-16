@@ -1,5 +1,3 @@
-# theme: jekyll-jkt-commons
-
 # Site wide configuration
 destination: docs
 url: 'https://rossgodwin.github.io/bojekylls'
@@ -48,12 +46,6 @@ compress_html:
 
 collections_dir: collections
 collections:
-  blog-information-technology:
-    output: true
-    permalink: /blog/information-technology/:path/
-  about-construction-projects:
-    output: true
-    permalink: /about/construction/projects/:path/
   demo:
     output: true
     permalink: /demo/:path/

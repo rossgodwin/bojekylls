@@ -22,7 +22,7 @@ $large-sidebar-width: 300px;
 	.jkt-layout-sticky-sidebar_sidebar-wrapper {
 		width: $medium-sidebar-width;
 		position: absolute;
-		top: 0;
+		top: $medium-device-page-header-height;
 	}
 	
 	.jkt-layout-sticky-sidebar_sidebar {

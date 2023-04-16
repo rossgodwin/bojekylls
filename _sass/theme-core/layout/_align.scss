@@ -1,15 +1,31 @@
-.jkt-align-horizontal-center {
+@mixin jkt-margin-align-horizontal-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jkt-margin-align-horizontal-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jkt-margin-align-horizontal-right {
+	margin-left: auto;
+}
+
+.jkt-text-align-horizontal-center {
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-.jkt-align-horizontal-left {
+.jkt-text-align-horizontal-left {
 	text-align: left;
-	margin-right: auto;
 }
 
-.jkt-align-horizontal-right {
+.jkt-text-align-horizontal-right {
 	text-align: right;
-	margin-left: auto;
+}
+
+.jkt-grid-align-vertical-center {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
 }

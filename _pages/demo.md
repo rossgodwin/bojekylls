@@ -1,5 +1,5 @@
 ---
-layout: theme-site/blog/posts
+layout: theme-site/hbf-page/posts
 permalink: /demo/
 title: Demo
 include-seo: false

@@ -4,6 +4,8 @@
 {% assign jscript-relative-urls = jscript-relative-urls | push: 'assets/theme-core/lib/jquery-3.1.1/js/jquery.min.js' %}
 {% assign jscript-relative-urls = jscript-relative-urls | push: 'assets/theme-core/js/scripts.js' %}
 
+{% assign jscript-relative-urls = jscript-relative-urls | push: 'assets/theme-core/lib/aos-3.0.0-beta.6/js/aos.min.js' %}
+
 {% if page.include-highlightjs %}
 	{% assign jscript-relative-urls = jscript-relative-urls | push: 'assets/theme-core/lib/highlightjs/js/highlight-10.0.3.min.js' %}
 {% endif %}
@@ -40,56 +42,59 @@
 	{% assign doc-ready = true %}
 {% endif %}
 
-{% if doc-ready == true %}
-	<script>
-		$(document).ready(function() {
-			{% for gallery in page.galleries %}
-				{% if gallery.type == 'dynamic' %}
-					$('#{{ gallery.id }}').on('click', function() {
-						$(this).lightGallery({
-							dynamic: true,
-							dynamicEl: [
-								{% for image in gallery.images %}
-									{
-										'src': '{{ image.url | relative_url }}',
-										'thumb': '{{ image.thumbnail_url | relative_url }}'{% if image.html_content %},{% endif %}
-										{% if image.html_content %}
-											'subHtml' : '{{ image.html_content }}'
-										{% endif %}
-									}{% if forloop.last != true %},{% endif %}
-								{% endfor %}
-							]
-						})
-					});
-				{% elsif gallery.type == 'thumbnails' %}
-					{% assign thumbnail-properties = '' | split: '' %}
-					{% if gallery.thumbnail-properties %}
-						{% if gallery.thumbnail-properties.rowheight %}
-							{% assign property = gallery.thumbnail-properties.rowheight | prepend: 'rowHeight:' %}
-							{% assign thumbnail-properties = thumbnail-properties | push: property %}
-						{% endif %}
-						{% if gallery.thumbnail-properties.margins %}
-							{% assign property = gallery.thumbnail-properties.margins | prepend: 'margins:' %}
-							{% assign thumbnail-properties = thumbnail-properties | push: property %}
-						{% endif %}
+<script>
+	AOS.init({
+		duration: 1000,
+		once: true
+	});
+	
+	$(document).ready(function() {
+		{% for gallery in page.galleries %}
+			{% if gallery.type == 'dynamic' %}
+				$('#{{ gallery.id }}').on('click', function() {
+					$(this).lightGallery({
+						dynamic: true,
+						dynamicEl: [
+							{% for image in gallery.images %}
+								{
+									'src': '{{ image.url | relative_url }}',
+									'thumb': '{{ image.thumbnail_url | relative_url }}'{% if image.html_content %},{% endif %}
+									{% if image.html_content %}
+										'subHtml' : '{{ image.html_content }}'
+									{% endif %}
+								}{% if forloop.last != true %},{% endif %}
+							{% endfor %}
+						]
+					})
+				});
+			{% elsif gallery.type == 'thumbnails' %}
+				{% assign thumbnail-properties = '' | split: '' %}
+				{% if gallery.thumbnail-properties %}
+					{% if gallery.thumbnail-properties.rowheight %}
+						{% assign property = gallery.thumbnail-properties.rowheight | prepend: 'rowHeight:' %}
+						{% assign thumbnail-properties = thumbnail-properties | push: property %}
 					{% endif %}
-					
-					$('#{{ gallery.id }}').lightGallery({
-						thumbnail: true
-					});
-					$('#{{ gallery.id }}').justifiedGallery(
-						{% if thumbnail-properties.size > 0 %}
-							{
-								{{ thumbnail-properties | join: ", " }}
-							}
-						{% endif %}
-					);
+					{% if gallery.thumbnail-properties.margins %}
+						{% assign property = gallery.thumbnail-properties.margins | prepend: 'margins:' %}
+						{% assign thumbnail-properties = thumbnail-properties | push: property %}
+					{% endif %}
 				{% endif %}
-			{% endfor %}
-			
-			{% if include.doc-ready-add-to-end-scripts %}
-				{{ include.doc-ready-add-to-end-scripts }}
+				
+				$('#{{ gallery.id }}').lightGallery({
+					thumbnail: true
+				});
+				$('#{{ gallery.id }}').justifiedGallery(
+					{% if thumbnail-properties.size > 0 %}
+						{
+							{{ thumbnail-properties | join: ", " }}
+						}
+					{% endif %}
+				);
 			{% endif %}
-		});
-	</script>
-{% endif %}
+		{% endfor %}
+		
+		{% if include.doc-ready-add-to-end-scripts %}
+			{{ include.doc-ready-add-to-end-scripts }}
+		{% endif %}
+	});
+</script>

@@ -1,0 +1,11 @@
+<div class="jkt-linktree-links">
+	{% for link in site.data.theme-site.linktree.links %}
+		{% assign _url = link.external-url %}
+		{% if link.internal-relative-url %}
+			{% assign = _url = link.internal-relative-url | relative_url %}
+		{% endif %}
+		<a class="jkt-linktree-button jkt-button jkt-button-solid-blue" href="{{ _url }}" role="button"{% if link.external-url %} target="_blank"{% endif %}>
+			<i class="{{ link.fontawesome-icon-classnames }}"></i><span>{{ link.title }}</span>
+		</a>
+	{% endfor %}
+</div>

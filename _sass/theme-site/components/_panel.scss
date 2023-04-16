@@ -1,8 +1,5 @@
-.jkt-panel {
-	@include themify() {
-		background: v(panel-background-color);
-		border-color: v(panel-border-color);
-		border-style: v(panel-border-style);
-		border-width: v(panel-border-width);
-	}
+.jkt-panel-gray {
+	@extend .jkt-background-color-gray98;
+	@extend .jkt-border-solid-2;
+	@extend .jkt-border-color-gray94;
 }

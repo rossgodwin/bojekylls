@@ -1,3 +1,27 @@
+
+@mixin makeOutlineButton($background-color, $text-color, $border-width) {
+	background: $background-color;
+	color: $text-color !important;
+	border-color: $text-color;
+	border-width: $border-width;
+	&:hover {
+		background: $text-color;
+		border-color: $text-color;
+		color: $background-color !important;
+	}
+}
+
+@mixin makeSolidButton($background-color, $text-color, $border-width) {
+	background: $background-color;
+	color: $text-color !important;
+	border-width: $border-width;
+	&:hover {
+		background: $text-color;
+		border-color: $background-color;
+		color: $background-color !important;
+	}
+}
+
 .jkt-button-left-icon {
 	@include themify() {
 		margin-right: v(button-icon-text-spacing);

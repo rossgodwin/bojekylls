@@ -1,74 +1,35 @@
 @mixin make1ColumnGrid() {
-	.grid-sizer {
-		@include themify() {
-			width: v(grid-1c-column-width);
-		}
-	}
-	.gutter-sizer {
-		@include themify() {
-			width: v(grid-1c-gutter-width);
-		}
-	}
-}
-
-@mixin make1ColumnGridColumn() {
 	@include themify() {
-		width: v(grid-1c-column-width);
+		grid-template-columns: v(grid-1c-column-width);
+		column-gap: v(grid-1c-gutter-width);
+		row-gap: v(grid-row-gap);
 	}
 }
 
 @mixin make2ColumnGrid() {
-	.grid-sizer {
-		@include themify() {
-			width: v(grid-2c-column-width);
-		}
-	}
-	.gutter-sizer {
-		@include themify() {
-			width: v(grid-2c-gutter-width);
-		}
-	}
-}
-
-@mixin make2ColumnGridColumn() {
 	@include themify() {
-		width: v(grid-2c-column-width);
+		grid-template-columns: v(grid-2c-column-width) v(grid-2c-column-width);
+		column-gap: v(grid-2c-gutter-width);
+		row-gap: v(grid-row-gap);
 	}
 }
 
 @mixin make3ColumnGrid() {
-	.grid-sizer {
-		@include themify() {
-			width: v(grid-3c-column-width);
-		}
-	}
-	.gutter-sizer {
-		@include themify() {
-			width: v(grid-3c-gutter-width);
-		}
-	}
-}
-
-@mixin make3ColumnGridColumn() {
 	@include themify() {
-		width: v(grid-3c-column-width);
+		grid-template-columns: v(grid-3c-column-width) v(grid-3c-column-width) v(grid-3c-column-width);
+		column-gap: v(grid-3c-gutter-width);
+		row-gap: v(grid-row-gap);
 	}
 }
 
 .jkt-grid-2c {
+	display: grid;
 	@include make1ColumnGrid();
 }
 
 .jkt-grid-3c {
+	display: grid;
 	@include make1ColumnGrid();
-}
-
-.jkt-grid-2c-item {
-	@include make1ColumnGridColumn();
-}
-
-.jkt-grid-3c-item {
-	@include make1ColumnGridColumn();
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
@@ -76,25 +37,13 @@
 		@include make2ColumnGrid();
 	}
 	
-	.jkt-grid-2c-item {
-		@include make2ColumnGridColumn();
-	}
-	
 	.jkt-grid-3c {
 		@include make2ColumnGrid();
-	}
-	
-	.jkt-grid-3c-item {
-		@include make2ColumnGridColumn();
 	}
 }
 
 @media (min-width: $device-width-breakpoint-large) {
 	.jkt-grid-3c {
 		@include make3ColumnGrid();
-	}
-	
-	.jkt-grid-3c-item {
-		@include make3ColumnGridColumn();
 	}
 }

@@ -1,0 +1,100 @@
+@mixin make1ColumnMGrid() {
+	.grid-sizer {
+		@include themify() {
+			width: v(grid-1c-column-width);
+		}
+	}
+	.gutter-sizer {
+		@include themify() {
+			width: v(grid-1c-gutter-width);
+		}
+	}
+}
+
+@mixin make1ColumnMGridColumn() {
+	@include themify() {
+		width: v(grid-1c-column-width);
+	}
+}
+
+@mixin make2ColumnMGrid() {
+	.grid-sizer {
+		@include themify() {
+			width: v(grid-2c-column-width);
+		}
+	}
+	.gutter-sizer {
+		@include themify() {
+			width: v(grid-2c-gutter-width);
+		}
+	}
+}
+
+@mixin make2ColumnMGridColumn() {
+	@include themify() {
+		width: v(grid-2c-column-width);
+	}
+}
+
+@mixin make3ColumnMGrid() {
+	.grid-sizer {
+		@include themify() {
+			width: v(grid-3c-column-width);
+		}
+	}
+	.gutter-sizer {
+		@include themify() {
+			width: v(grid-3c-gutter-width);
+		}
+	}
+}
+
+@mixin make3ColumnMGridColumn() {
+	@include themify() {
+		width: v(grid-3c-column-width);
+	}
+}
+
+.jkt-mgrid-2c {
+	@include make1ColumnMGrid();
+}
+
+.jkt-mgrid-3c {
+	@include make1ColumnMGrid();
+}
+
+.jkt-mgrid-2c-item {
+	@include make1ColumnMGridColumn();
+}
+
+.jkt-mgrid-3c-item {
+	@include make1ColumnMGridColumn();
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.jkt-mgrid-2c {
+		@include make2ColumnMGrid();
+	}
+	
+	.jkt-mgrid-2c-item {
+		@include make2ColumnMGridColumn();
+	}
+	
+	.jkt-mgrid-3c {
+		@include make2ColumnMGrid();
+	}
+	
+	.jkt-mgrid-3c-item {
+		@include make2ColumnMGridColumn();
+	}
+}
+
+@media (min-width: $device-width-breakpoint-large) {
+	.jkt-mgrid-3c {
+		@include make3ColumnMGrid();
+	}
+	
+	.jkt-mgrid-3c-item {
+		@include make3ColumnMGridColumn();
+	}
+}
