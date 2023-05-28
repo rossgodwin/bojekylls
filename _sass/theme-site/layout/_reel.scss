@@ -7,7 +7,7 @@
 	.jkt-layout-reel {
 		min-width: 1140px;
 		max-width: 1140px;
-		@include jkt-margin-align-horizontal-center;
+		@include _marginAlignHorizontalCenter;
 		padding-left: 0;
 		padding-right: 0;
 	}

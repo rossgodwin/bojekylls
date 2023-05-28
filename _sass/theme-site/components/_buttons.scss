@@ -19,17 +19,17 @@
 }
 
 .jkt-button-outline-blue {
-	@include makeOutlineButton($color-white, $color-blue, 2px);
+	@include _makeOutlineButton($color-white, $color-blue, 2px);
 }
 
 .jkt-button-solid-blue {
-	@include makeSolidButton($color-blue, $color-white ,2px);
+	@include _makeSolidButton($color-blue, $color-white ,2px);
 }
 
 .jkt-button-outline-green {
-	@include makeOutlineButton($color-white, $color-green-lime, 2px);
+	@include _makeOutlineButton($color-white, $color-green-lime, 2px);
 }
 
 .jkt-button-solid-green {
-	@include makeSolidButton($color-green-lime, $color-white, 2px);
+	@include _makeSolidButton($color-green-lime, $color-white, 2px);
 }

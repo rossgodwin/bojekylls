@@ -1,5 +1,5 @@
 
-@mixin makeOutlineButton($background-color, $text-color, $border-width) {
+@mixin _makeOutlineButton($background-color, $text-color, $border-width) {
 	background: $background-color;
 	color: $text-color !important;
 	border-color: $text-color;
@@ -11,7 +11,7 @@
 	}
 }
 
-@mixin makeSolidButton($background-color, $text-color, $border-width) {
+@mixin _makeSolidButton($background-color, $text-color, $border-width) {
 	background: $background-color;
 	color: $text-color !important;
 	border-width: $border-width;
@@ -22,16 +22,12 @@
 	}
 }
 
-.jkt-button-left-icon {
-	@include themify() {
-		margin-right: v(button-icon-text-spacing);
-	}
+.gs-button-left-icon {
+	margin-right: 8px;
 }
 
-.jkt-button-right-icon {
-	@include themify() {
-		margin-left: v(button-icon-text-spacing);
-	}
+.gs-button-right-icon {
+	margin-left: 8px;
 }
 
 .jkt-paging-buttons {

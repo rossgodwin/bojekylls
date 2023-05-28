@@ -1,7 +1,7 @@
 {% if paginator.total_pages > 1 %}
 	<nav class="jkt-paging-buttons">
 		{% if paginator.previous_page %}
-			<a class="jkt-button-paging-previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="jkt-button-left-icon fas fa-long-arrow-alt-left"></i>Previous</a>
+			<a class="jkt-button-paging-previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="gs-button-left-icon fas fa-long-arrow-alt-left"></i>Previous</a>
 		{% endif %}
 		
 		{% if paginator.page_trail %}
@@ -11,7 +11,7 @@
 		{% endif %}
 		
 		{% if paginator.next_page %}
-			<a class="jkt-paging-button-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next<i class="jkt-button-right-icon fas fa-long-arrow-alt-right"></i></a>
+			<a class="jkt-paging-button-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next<i class="gs-button-right-icon fas fa-long-arrow-alt-right"></i></a>
 		{% endif %}
 	</nav>
 {% endif %}

@@ -1,7 +1,7 @@
 @import "abstracts/breakpoints";
 @import "abstracts/colors";
 @import "abstracts/fonts";
-@import "abstracts/links";
+@import "abstracts/variables";
 @import "abstracts/mixins/hover";
 @import "abstracts/mixins/opacity";
 
@@ -10,14 +10,12 @@
 @import "vendors/fontawesome-free-5.15.3-web/solid.scss";
 @import "vendors/fontawesome-free-5.15.3-web/brands.scss";
 
-@import "themes/themes";
-
 @import "components/background";
 @import "components/blockquote";
 @import "components/buttons";
 @import "components/headings";
-@import "components/horizontal-line";
 @import "components/images";
+@import "components/links";
 @import "components/paging";
 
 @import "layout/align";

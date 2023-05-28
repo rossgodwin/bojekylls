@@ -1,0 +1,43 @@
+@mixin _make1ColumnGrid() {
+	grid-template-columns: $grid-1c-column-width;
+	column-gap: $grid-1c-gutter-width;
+	row-gap: $grid-row-gap;
+}
+
+@mixin _make2ColumnGrid() {
+	grid-template-columns: $grid-2c-column-width $grid-2c-column-width;
+	column-gap: $grid-2c-gutter-width;
+	row-gap: $grid-row-gap;
+}
+
+@mixin _make3ColumnGrid() {
+	grid-template-columns: $grid-3c-column-width $grid-3c-column-width $grid-3c-column-width;
+	column-gap: $grid-3c-gutter-width;
+	row-gap: $grid-row-gap;
+}
+
+.gs-grid-2c {
+	display: grid;
+	@include _make1ColumnGrid();
+}
+
+.gs-grid-3c {
+	display: grid;
+	@include _make1ColumnGrid();
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.gs-grid-2c {
+		@include _make2ColumnGrid();
+	}
+	
+	.gs-grid-3c {
+		@include _make2ColumnGrid();
+	}
+}
+
+@media (min-width: $device-width-breakpoint-large) {
+	.gs-grid-3c {
+		@include _make3ColumnGrid();
+	}
+}

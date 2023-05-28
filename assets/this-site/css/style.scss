@@ -3,6 +3,6 @@
 
 $site-baseurl: '{{ site.baseurl }}';
 
-@import "theme-core/theme-core";
+@import "gs-css-core/core";
 @import "theme-site/theme-site";
 @import "this-site/this-site";
