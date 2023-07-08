@@ -1,9 +1,9 @@
 ---
-layout: theme-site/hbf-page/post
+layout: bojekylls/header-body-footer/post
 author-id: 1
 title: Add a Styled Blockquote
 include-seo: true
-image-path: assets/this-site/images/blog/posts/apache-forward-requests-conditionally-to-wildfly/banner.jpg
+image-path: assets/images/blog/add-styled-blockquote/banner.jpg
 categories: [demo]
 tags: [jekyll, theme-example-feature]
 date: 2018-01-03
@@ -21,11 +21,11 @@ Here is a example of how to add a block quote.
 	Footsteps even lighter
 	Doesn't mean I'm over 'cause you're gone
 {% endcapture %}
-{% include theme-core/components/quote.html quote=_quote quote_by='Kelly Clarkson' %}
+{% include bojekylls/components/quote.html quote=_quote quote_by='Kelly Clarkson' %}
 
 
 1) Add 'include-highlightjs: yes' in the page frontmatter
 {% capture _html %}
 	include-highlightjs: yes
 {% endcapture %}
-{% include theme-core/components/html-source-code-block.html html=_html %}
+{% include bojekylls/components/html-source-code-block.html html=_html %}

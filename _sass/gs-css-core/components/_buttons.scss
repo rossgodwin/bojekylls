@@ -1,4 +1,3 @@
-
 @mixin _makeOutlineButton($background-color, $text-color, $border-width) {
 	background: $background-color;
 	color: $text-color !important;
@@ -28,10 +27,4 @@
 
 .gs-button-right-icon {
 	margin-left: 8px;
-}
-
-.jkt-paging-buttons {
-	a {
-	    @extend .jkt-button;
-	}
 }

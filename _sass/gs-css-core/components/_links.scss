@@ -1,3 +1,9 @@
+@mixin _styleLinkApplySameColorToAllStates($color) {
+	a:link, a:visited, a:hover, a:active {
+		color: $color;
+	}
+}
+
 .gs-link-no-underline {
 	text-decoration: none;
 	&:hover {

@@ -1,0 +1,28 @@
+@page {
+	size: a3;
+}
+
+body {
+	min-width: 992px;
+}
+
+.jkt-page {
+	grid-template-rows: auto;
+}
+
+.gs-bjk-layout-hbf-page-header {
+	display: none;
+}
+
+.jkt-page-body {
+	grid-template-areas:
+		"cm";
+}
+
+.jkt-page-body-header {
+	display: none;
+}
+
+.jkt-page-body-main {
+	padding: 0;
+}

@@ -1,0 +1,9 @@
+{% assign _og-type = site.data.gs-jekyll-core.seo.og-type %}
+{% if page.og-type %}
+	{% assign _og-type = page.og-type %}
+{% elsif layout.og-type %}
+	{% assign _og-type = layout.og-type %}
+{% endif %}
+{% if _og-type %}
+	<meta property="og:type" content="{{ _og-type }}" />
+{% endif %}

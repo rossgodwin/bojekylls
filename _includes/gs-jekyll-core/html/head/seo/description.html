@@ -1,0 +1,11 @@
+{% assign _description = site.data.gs-jekyll-core.seo.description %}
+{% if page.description %}
+	{% assign _description = page.description %}
+{% elsif page.excerpt %}
+	{% assign _description = page.excerpt | strip_html %}
+{% elsif layout.description %}
+	{% assign _description = layout.description %}
+{% endif %}
+{% if _description %}
+	<meta name="description" content="{{ _description }}" />
+{% endif %}

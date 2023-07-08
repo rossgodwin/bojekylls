@@ -1,0 +1,44 @@
+.gs-bjk-heading {
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+	@include themify() {
+		color: v(heading-color);
+	}
+}
+
+.gs-bjk-heading-vertical-bar {
+	@extend .gs-bjk-heading;
+	position: relative;
+	padding-left: 1rem;
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		width: 5px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		@include themify() {
+			background: v(heading-color);
+		}
+   }
+}
+
+.gs-bjk-heading-line-separator {
+	@extend .gs-bjk-heading;
+	display: grid;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+	grid-gap: 20px;
+	&:before,
+	&:after {
+		content: "";
+		border-top-style: solid;
+		border-top-width: 1px;
+		@include themify() {
+			border-top-color: v(heading-color);
+		}
+	}
+}

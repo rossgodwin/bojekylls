@@ -1,0 +1,18 @@
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+{% include gs-jekyll-core/utils/get-page-url.html %}
+<link rel="canonical" href="{{ __return }}">
+
+{% include gs-jekyll-core/utils/get-page-title.html %}
+{% if __return %}
+	<title>{{ __return }}</title>
+{% endif %}
+
+{% include gs-jekyll-core/html/head/head-seo.html %}
+{% include gs-jekyll-core/html/head/head-favicon.html %}
+<link rel="stylesheet" type="text/css" href="{{ 'assets/bojekylls/styles/style.css' | relative_url }}">
+{% include gs-jekyll-core/html/head/head-css.html %}
+{% include gs-jekyll-core/html/head/head-scripts.html google-analytics-measurement-id=site.google_analytics_measurement_id %}

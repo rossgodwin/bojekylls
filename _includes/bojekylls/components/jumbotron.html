@@ -1,0 +1,14 @@
+{% assign _style = '' | split: '' %}
+{% if include.background-color %}
+	{% assign _color = include.background-color | prepend: 'background-color: ' | append: ';' %}
+	{% assign _style = _style | push: _color %}
+{% endif %}
+{% if include.background-image-relative-url %}
+	{% assign _image-url = include.background-image-relative-url | relative_url %}
+	{% assign _url = _image-url | prepend: "background-image: url('" | append: "');" %}
+	{% assign _style = _style | push: _url %}
+{% endif %}
+
+<div class="gs-bjk-jumbotron"{% if _style.size > 0 %} style="{{ _style | join: ' ' }}"{% endif %}>
+	{{ include.content }}
+</div>

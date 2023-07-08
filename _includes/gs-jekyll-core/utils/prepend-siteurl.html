@@ -1,0 +1,6 @@
+{% include gs-jekyll-core/utils/prepend-baseurl.html path=include.url %}
+{% assign post-url = __return %}
+{% include gs-jekyll-core/utils/prepend-path.html
+	path=post-url
+	prepend_path=site.url
+%}

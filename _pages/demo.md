@@ -1,5 +1,5 @@
 ---
-layout: theme-site/hbf-page/posts
+layout: bojekylls/header-body-footer/posts
 permalink: /demo/
 title: Demo
 include-seo: false

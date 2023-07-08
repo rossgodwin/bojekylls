@@ -1,0 +1,9 @@
+{% assign _keywords = site.data.gs-jekyll-core.seo.keywords %}
+{% if page.tags %}
+	{% assign _keywords = page.tags %}
+{% elsif layout.tags %}
+	{% assign _keywords = layout.tags %}
+{% endif %}
+{% if _keywords %}
+	<meta name="keywords" content="{{ _keywords | join: ', ' }}" />
+{% endif %}

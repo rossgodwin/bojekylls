@@ -1,0 +1,16 @@
+include-social-icons: yes
+
+text-links:
+  - text: About
+    relative-url: about
+  - text: Blog
+    relative-url: blog
+  - text: Github
+    external-url: https://www.github.com
+    target: _blank
+
+line1-html: <span>&copy;<span> <span id="year"></span> All Rights Reserved.
+
+line2-html: Powered by <a href="#"><b>Bojekylls</b></a> Theme
+
+email-address: john.doe@gmail.com

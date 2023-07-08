@@ -1,0 +1,10 @@
+{% assign asset-url = site.data.gs-jekyll-core.seo.og-image-asset-url %}
+{% if page.og-image-asset-url %}
+	{% assign asset-url = page.og-image-asset-url %}
+{% elsif layout.og-image-asset-url %}
+	{% assign asset-url = layout.og-image-asset-url %}
+{% endif %}
+{% if asset-url %}
+	{% include gs-jekyll-core/utils/prepend-siteurl.html url=asset-url %}
+	<meta property="og:image" content="{{ __return }}" />
+{% endif %}

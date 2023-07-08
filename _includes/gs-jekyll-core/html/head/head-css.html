@@ -1,0 +1,45 @@
+{% assign head-css-external-urls = '' | split: '' %}
+
+{% assign head-css-external-urls = head-css-external-urls | uniq %}
+{% for css in head-css-external-urls %}
+    <link rel="stylesheet" type="text/css" href="{{ css }}">
+{% endfor %}
+
+{% assign head-css-relative-urls = '' | split: '' %}
+
+{% assign head-css-relative-urls = head-css-relative-urls | push: 'assets/bojekylls/libs/aos-3.0.0-beta.6/css/aos.css' %}
+
+{% if page.include-highlightjs %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: 'assets/bojekylls/libs/highlightjs/css/monokai-sublime.min.css' %}
+{% endif %}
+
+{% if page.galleries %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: 'assets/bojekylls/libs/justifiedgallery/css/justifiedGallery.min.css' %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: 'assets/bojekylls/libs/lightgallery/css/lightgallery.min.css' %}
+{% endif %}
+
+{% if layout.head-css-relative-urls %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: layout.head-css-relative-urls %}
+{% endif %}
+{% if page.head-css-relative-urls %}
+	{% assign head-css-relative-urls = head-css-relative-urls | push: page.head-css-relative-urls %}
+{% endif %}
+
+{% assign head-css-relative-urls = head-css-relative-urls | uniq %}
+{% for css in head-css-relative-urls %}
+    <link rel="stylesheet" type="text/css" href="{{ css | relative_url }}">
+{% endfor %}
+
+{% assign print-css-relative-urls = '' | split: '' %}
+
+{% if layout.head-print-css-relative-urls %}
+	{% assign print-css-relative-urls = print-css-relative-urls | push: layout.head-print-css-relative-urls %}
+{% endif %}
+{% if page.head-print-css-relative-urls %}
+	{% assign print-css-relative-urls = print-css-relative-urls | push: page.head-print-css-relative-urls %}
+{% endif %}
+
+{% assign print-css-relative-urls = print-css-relative-urls | uniq %}
+{% for css in print-css-relative-urls %}
+	<link rel="stylesheet" type="text/css" href="{{ css | relative_url }}" media="print">
+{% endfor %}

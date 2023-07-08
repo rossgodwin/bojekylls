@@ -1,0 +1,4 @@
+{% assign __return = site.data.gs-jekyll-core.seo.title %}
+{% if page.title %}
+	{% assign __return = page.title | prepend: ' - ' | prepend: __return %}
+{% endif %}

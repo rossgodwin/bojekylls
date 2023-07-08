@@ -1,0 +1,25 @@
+---
+layout: bojekylls/default
+---
+
+<div class="gs-bjk-linktree-page jkt-layout-reel">
+	<div class="gs-bjk-linktree-page-header">
+		<a href="{{ site.data.bojekylls.linktree.logo.relative-url | relative_url }}">
+			<img src="{{ site.data.bojekylls.linktree.logo.image-relative-url | relative_url }}" alt="{{ site.data.bojekylls.site-navbar.title }}">
+		</a>
+		<span class="jkt-text-small">{{ site.data.bojekylls.linktree.subtitle }}</span>
+	</div>
+	<div class="gs-bjk-linktree-page-body gs-margin-align-horizontal-center">
+		<div class="gs-bjk-linktree-buttons">
+			{% for link in site.data.bojekylls.linktree.links %}
+				{% assign _url = link.external-url %}
+				{% if link.internal-relative-url %}
+					{% assign = _url = link.internal-relative-url | relative_url %}
+				{% endif %}
+				<a class="gs-bjk-linktree-button gs-bjk-button gs-bjk-button-solid-blue" href="{{ _url }}" role="button"{% if link.external-url %} target="_blank"{% endif %}>
+					<i class="{{ link.fontawesome-icon-classnames }} fa-align-left"></i><span>{{ link.title }}</span>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>

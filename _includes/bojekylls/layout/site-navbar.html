@@ -1,0 +1,33 @@
+<div class="gs-bjk-site-navbar">
+	<div class="gs-bjk-site-navbar-logo">
+		<a href="{{ site.data.bojekylls.site-navbar.logo.relative-url | relative_url }}"><img src="{{ site.data.bojekylls.site-navbar.logo.image-relative-url | relative_url }}" alt="{{ site.data.bojekylls.site-navbar.title }}"></a>
+	</div>
+	
+	<button class="gs-bjk-site-navbar-menu-toggler" type="button" aria-label="Toggle navigation">
+		<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+	</button>
+	
+	<nav class="gs-bjk-site-navbar-menu">
+		<ul>
+			{% for item in site.data.bojekylls.site-navbar.menu %}
+				<li class="gs-bjk-site-navbar-menu-item{% if item.menu %} gs-bjk-site-navbar-menu-dropdown{% endif %}">
+					<a href="{% if item.menu %}#{% else %}{{ item.relative-url | relative_url }}{% endif %}" class="gs-link-no-underline{% if item.menu %} gs-bjk-site-navbar-menu-dropdown-trigger{% endif %}"><span class="gs-bjk-site-navbar-text">{{ item.title }}</span></a>
+					{% if item.menu %}
+						<div class="gs-bjk-site-navbar-dropdown-menu">
+							<div class="gs-bjk-site-navbar-dropdown-menu-panel">
+								{% for s-item in item.menu %}
+									<a href="{{ s-item.relative-url | relative_url }}"><img src="{{ s-item.icon-relative-url | relative_url }}" alt="{{ s-item.title }}"></a>
+									<div>
+										<a href="{{ s-item.relative-url | relative_url }}" class="gs-link-no-underline"><span class="gs-bjk-site-navbar-text">{{ s-item.title }}</span></a>
+										<br/>
+										<span class="jkt-text-small">{{ s-item.description }}</span>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+</div>

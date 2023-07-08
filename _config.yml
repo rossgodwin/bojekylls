@@ -88,7 +88,7 @@ defaults:
   - scope:
       type: docs
     values:
-      layout: this-site/doc
+      layout: doc
       sitemap: false
       include-seo: false
       categories: [documentation]

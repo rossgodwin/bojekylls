@@ -1,0 +1,23 @@
+{% if page.include-seo == true %}
+	{% include gs-jekyll-core/html/head/seo/keywords.html %}
+	{% include gs-jekyll-core/html/head/seo/description.html %}
+	{% include gs-jekyll-core/html/head/seo/author.html %}
+{% endif %}
+
+{% if page.include-seo-og == true %}
+	{% if site.data.gs-jekyll-core.seo.og-locale %}
+		<meta property="og:locale" content="{{ site.data.gs-jekyll-core.seo.og-locale }}" />
+	{% endif %}
+	
+	{% if site.data.gs-jekyll-core.seo.og-site-name %}
+		<meta name="og:site_name" content="{{ site.data.gs-jekyll-core.seo.og-site-name }}" />
+	{% endif %}
+	
+	{% include gs-jekyll-core/utils/get-page-url.html %}
+	<meta property="og:url" content="{{ __return }}" />
+	
+	{% include gs-jekyll-core/html/head/seo/og-title.html %}
+	{% include gs-jekyll-core/html/head/seo/og-description.html %}
+	{% include gs-jekyll-core/html/head/seo/og-type.html %}
+	{% include gs-jekyll-core/html/head/seo/og-image.html %}
+{% endif %}

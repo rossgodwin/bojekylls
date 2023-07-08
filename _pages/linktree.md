@@ -1,5 +1,5 @@
 ---
-layout: theme-site/linktree
+layout: bojekylls/linktree
 permalink: /linktree/
 title: "Linktree"
 ---

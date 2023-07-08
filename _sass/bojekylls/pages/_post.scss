@@ -1,0 +1,62 @@
+.gs-bjk-post-page {
+	margin-top: 1rem;
+}
+
+.gs-bjk-post-metadata {
+	margin-bottom: 1rem;
+	font-size: 0.8125rem;
+	@include themify() {
+		color: v(post-header-meta-text-color);
+	}
+}
+
+.gs-bjk-post-page-body {
+	.jkt-blockquote {
+		margin-bottom: 0.5rem;
+	}
+	
+	> h1 {
+		@extend .gs-bjk-heading;
+	}
+	> h2, > h3, > h4, > h5, > h6 {
+		@extend .gs-bjk-heading;
+		margin-top: 1rem;
+	}
+	
+	h1 {
+		font-size: 1.8rem;
+	}
+	
+	h2 {
+		font-size: 1.4rem;
+	}
+	
+	h3 {
+		font-size: 1.25rem;
+	}
+	
+	h4 {
+		font-size: 1.15rem;
+	}
+	
+	h5 {
+		font-size: 1.1rem;
+	}
+}
+
+.gs-bjk-post-thumbnails {
+	margin-right: 25px;
+	margin-bottom: 25px;
+	padding: 10px;
+}
+
+@media (min-width: $device-width-breakpoint-large) {
+	.gs-bjk-post-page-body {
+		float: none;
+	}
+	
+	.gs-bjk-post-thumbnails {
+		float: left;
+		width: 450px;
+	}
+}

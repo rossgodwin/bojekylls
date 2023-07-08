@@ -1,0 +1,25 @@
+---
+permalink: robots.txt
+---
+
+Sitemap: {{ 'sitemap.xml' | absolute_url }}
+
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-Mobile
+User-agent: Googlebot-News
+User-agent: Googlebot-Video
+User-agent: Mediapartners-Google
+User-agent: AdsBot-Google
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: facebot
+User-agent: facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext.php)
+User-agent: facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)
+User-agent: ia_archiver
+Disallow: {{ 'assets/' | relative_url }}
+{{ content }}

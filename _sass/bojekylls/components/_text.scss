@@ -1,0 +1,6 @@
+.jkt-text-small {
+	font-size: 0.92rem;
+	@include themify() {
+		color: v(text-small-color);
+	}
+}

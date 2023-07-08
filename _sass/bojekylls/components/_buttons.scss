@@ -1,0 +1,35 @@
+.gs-bjk-button {
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.375rem 1rem;
+	height: 2.75rem;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	text-decoration: none;
+	user-select: none;
+	&:hover {
+		text-decoration: none;
+	}
+	border-color: transparent;
+	font-size: 1rem;
+	padding-top: 0.5rem;
+}
+
+.gs-bjk-button-outline-blue {
+	@include _makeOutlineButton($color-white, $color-blue, 2px);
+}
+
+.gs-bjk-button-solid-blue {
+	@include _makeSolidButton($color-blue, $color-white ,2px);
+}
+
+.gs-bjk-button-outline-green {
+	@include _makeOutlineButton($color-white, $color-green-lime, 2px);
+}
+
+.gs-bjk-button-solid-green {
+	@include _makeSolidButton($color-green-lime, $color-white, 2px);
+}

@@ -1,0 +1,59 @@
+.gs-bjk-layout-hbf-page {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: minmax(0, 1fr); // prevent grid blowout i.e. when embedding a gist in the grid
+	grid-template-areas:
+		// h = header
+		// b = body
+		// f = footer
+		"h"
+		"b"
+		"f";
+	height: 100vh;
+}
+
+.gs-bjk-layout-hbf-page-header {
+	grid-area: h;
+	@include themify() {
+		background-color: v(page-header-background-color);
+		border-bottom-color: v(page-header-bottom-border-color);
+	}
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.gs-bjk-layout-hbf-page-body {
+	grid-area: b;
+	display: grid;
+	grid-template-rows: 1fr;
+}
+
+.gs-bjk-layout-hbf-page-footer {
+	grid-area: f;
+	@include themify() {
+		background-color: v(page-footer-background-color);
+		color: v(page-footer-text-color);
+	}
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top-style: solid;
+	border-top-width: 5px;
+	@include themify() {
+		border-top-color: v(page-footer-border-top-color);
+	}
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.gs-bjk-layout-hbf-page {
+		grid-template-rows: $medium-device-page-header-height 1fr auto;
+	}
+	
+	.gs-bjk-layout-hbf-page-header {
+		height: $medium-device-page-header-height;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+	}
+}
