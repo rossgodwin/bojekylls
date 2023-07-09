@@ -6,23 +6,10 @@ body {
 	min-width: 992px;
 }
 
-.jkt-page {
-	grid-template-rows: auto;
-}
-
-.gs-bjk-layout-hbf-page-header {
+.gs-bjk-page-header {
 	display: none;
 }
 
-.jkt-page-body {
-	grid-template-areas:
-		"cm";
-}
-
-.jkt-page-body-header {
+.gs-bjk-page-footer {
 	display: none;
-}
-
-.jkt-page-body-main {
-	padding: 0;
 }

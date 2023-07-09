@@ -10,5 +10,7 @@
 {% endif %}
 
 <div class="gs-bjk-jumbotron"{% if _style.size > 0 %} style="{{ _style | join: ' ' }}"{% endif %}>
-	{{ include.content }}
+	<section class="gs-bjk-jumbotron-content">
+		{{ include.content }}
+	</section>
 </div>

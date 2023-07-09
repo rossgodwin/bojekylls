@@ -1,4 +1,7 @@
 .gs-bjk-linktree-page {
+	padding-left: $viewport-left-padding;
+	padding-right: $viewport-right-padding;
+	
 	display: grid;
 	grid-template-areas:
 		// h = header
@@ -58,5 +61,12 @@
 	.gs-bjk-linktree-page-body {
 		min-width: 648px;
 		max-width: 648px;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	.gs-bjk-linktree-page {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

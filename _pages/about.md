@@ -1,5 +1,5 @@
 ---
-layout: bojekylls/header-body-footer/page-single_column
+layout: bojekylls/header-body-footer/page
 permalink: /about/
 title: "About"
 tags: [jekyll, jekyll-theme, static website, personal website]

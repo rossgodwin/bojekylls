@@ -7,7 +7,6 @@ $themes: (
 	default: (
 		heading-color: $color-blue,
 		link-color: $color-blue,
-		text-small-color: #9a9c9a,
 		page-header-background-color: $color-white,
 		page-header-bottom-border-color: $color-gray80,
 		page-header-menu-icon-color: $color-blue,
@@ -21,7 +20,6 @@ $themes: (
 		blockquote-quote-color: $color-white,
 		blockquote-footer-text-color: #6c757d,
 		form-searchfield-border-color: $color-gray98,
-		post-header-meta-text-color: lighten($color-gray16, 40%)
 	)
 );
 

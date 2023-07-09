@@ -1,4 +1,4 @@
-.gs-bjk-layout-hbf-page {
+.gs-bjk-page {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	grid-template-columns: minmax(0, 1fr); // prevent grid blowout i.e. when embedding a gist in the grid
@@ -12,7 +12,7 @@
 	height: 100vh;
 }
 
-.gs-bjk-layout-hbf-page-header {
+.gs-bjk-page-header {
 	grid-area: h;
 	@include themify() {
 		background-color: v(page-header-background-color);
@@ -22,13 +22,20 @@
 	border-bottom-width: 1px;
 }
 
-.gs-bjk-layout-hbf-page-body {
+.gs-bjk-page-body {
 	grid-area: b;
 	display: grid;
 	grid-template-rows: 1fr;
 }
 
-.gs-bjk-layout-hbf-page-footer {
+.gs-bjk-page-content {
+	padding-left: $viewport-left-padding;
+	padding-right: $viewport-right-padding;
+	@extend .gs-margin-top-20;
+	@extend .gs-margin-bottom-20;
+}
+
+.gs-bjk-page-footer {
 	grid-area: f;
 	@include themify() {
 		background-color: v(page-footer-background-color);
@@ -44,16 +51,26 @@
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.gs-bjk-layout-hbf-page {
+	.gs-bjk-page {
 		grid-template-rows: $medium-device-page-header-height 1fr auto;
 	}
 	
-	.gs-bjk-layout-hbf-page-header {
+	.gs-bjk-page-header {
 		height: $medium-device-page-header-height;
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
 		z-index: 1;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	.gs-bjk-page-content {
+		min-width: 1140px;
+		max-width: 1140px;
+		@include _marginAlignHorizontalCenter;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

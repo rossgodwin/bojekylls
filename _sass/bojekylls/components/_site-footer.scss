@@ -1,4 +1,7 @@
 .gs-bjk-site-footer {
+	padding-left: $viewport-left-padding;
+	padding-right: $viewport-right-padding;
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -70,5 +73,15 @@
 		span {
 			font-size: 2em;
 		}
+	}
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	.gs-bjk-site-footer {
+		min-width: $viewport-content-max-width;
+		max-width: $viewport-content-max-width;
+		@include _marginAlignHorizontalCenter;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }

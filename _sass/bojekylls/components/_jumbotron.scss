@@ -5,3 +5,20 @@
 	background-repeart: no-repeat;
 	background-position: center;
 }
+
+.gs-bjk-jumbotron-content {
+	height: 400px;
+	padding-left: $viewport-left-padding;
+	padding-right: $viewport-right-padding;
+	@extend .gs-grid-align-vertical-center;
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	.gs-bjk-jumbotron-content {
+		min-width: $viewport-content-max-width;
+		max-width: $viewport-content-max-width;
+		@include _marginAlignHorizontalCenter;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

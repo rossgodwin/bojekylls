@@ -2,14 +2,6 @@
 	margin-top: 1rem;
 }
 
-.gs-bjk-post-metadata {
-	margin-bottom: 1rem;
-	font-size: 0.8125rem;
-	@include themify() {
-		color: v(post-header-meta-text-color);
-	}
-}
-
 .gs-bjk-post-page-body {
 	.jkt-blockquote {
 		margin-bottom: 0.5rem;
