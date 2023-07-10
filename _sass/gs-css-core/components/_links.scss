@@ -10,3 +10,10 @@
 		text-decoration: none;
 	}
 }
+
+.gs-link-underline {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: underline;
+	}
+}

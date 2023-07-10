@@ -61,8 +61,6 @@
 }
 
 .gs-bjk-site-footer-line2 {
-	font-size: 0.85em;
-	
 	@include themify() {
 		@include _styleLinkApplySameColorToAllStates(v(page-footer-text-color));
 	}
