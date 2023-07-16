@@ -3,6 +3,7 @@ layout: bojekylls/header-body-footer/posts
 permalink: /demo/
 title: Demo
 include-seo: false
+show-page-loading-overlay: true
 pagination:
   enabled: true
   collection: demo

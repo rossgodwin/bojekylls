@@ -1,5 +1,5 @@
-$medium-sidebar-width: 200px;
-$large-sidebar-width: 300px;
+$medium-device-sidebar-width: 200px;
+$large-device-sidebar-width: 300px;
 
 .gs-bjk-sticky-sidebar {
 	grid-template-areas:
@@ -20,7 +20,7 @@ $large-sidebar-width: 300px;
 
 @media (min-width: $device-width-breakpoint-medium) {
 	.gs-bjk-sticky-sidebar_sidebar-wrapper {
-		width: $medium-sidebar-width;
+		width: $medium-device-sidebar-width;
 		position: absolute;
 		top: $medium-device-page-header-height;
 	}
@@ -28,7 +28,7 @@ $large-sidebar-width: 300px;
 	.gs-bjk-sticky-sidebar_sidebar {
 		//height: 100%;
 		max-height: calc(100vh - 5em);
-		width: $medium-sidebar-width;
+		width: $medium-device-sidebar-width;
 		position: fixed;
 		z-index: 1;
 		overflow-x: hidden;
@@ -36,20 +36,20 @@ $large-sidebar-width: 300px;
 	}
 	
 	.gs-bjk-sticky-sidebar_body {
-		margin-left: $medium-sidebar-width;
+		margin-left: $medium-device-sidebar-width;
 	}
 }
 
 @media (min-width: $device-width-breakpoint-xlarge) {
 	.gs-bjk-sticky-sidebar_sidebar-wrapper {
-		width: $large-sidebar-width;
+		width: $large-device-sidebar-width;
 	}
 	
 	.gs-bjk-sticky-sidebar_sidebar {
-		width: $large-sidebar-width;
+		width: $large-device-sidebar-width;
 	}
 	
 	.gs-bjk-sticky-sidebar_body {
-		margin-left: $large-sidebar-width;
+		margin-left: $large-device-sidebar-width;
 	}
 }

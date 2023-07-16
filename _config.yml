@@ -72,6 +72,8 @@ defaults:
     values:
       include-seo: false
       include-seo-og: false
+      show-page-loading-overlay: false
+      page-loading-overlay-id: page-loading-overlay-id
   - scope:
       path: blog/*
     values:

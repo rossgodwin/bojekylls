@@ -1,0 +1,65 @@
+$small-device-background-image-width: 144px;
+$medium-device-background-image-width: 192px;
+$large-device-background-image-width: 248px;
+
+.gs-bjk-page-loading-overlay {
+	background: $color-white url('/assets/images/site/logo.png') no-repeat center center;
+	background-size: $small-device-background-image-width;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+.gs-bjk-page-loading-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.gs-bjk-page-loading-animation-bar {
+	// https://css-tricks.com/timer-bars-in-css-with-custom-properties
+	width: calc(#{$small-device-background-image-width} - 20px);
+	margin-top: 80px;
+	overflow: hidden;
+}
+.gs-bjk-page-loading-animation-bar div {
+	height: 8px;
+	animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+	forwards;
+	transform-origin: left center;
+	background: $color-blue;
+}
+.gs-bjk-page-loading-animation-bar[data-style="smooth"] div {
+	animation: roundtime calc(var(--duration) * 1s) linear forwards;
+}
+
+@keyframes roundtime {
+	to {
+		transform: scaleX(0);
+	}
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.gs-bjk-page-loading-overlay {
+		background-size: $medium-device-background-image-width;
+	}
+	
+	.gs-bjk-page-loading-animation-bar {
+		width: calc(#{$medium-device-background-image-width} - 20px);
+		margin-top: 100px;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-large) {
+	.gs-bjk-page-loading-overlay {
+		background-size: $large-device-background-image-width;
+	}
+	
+	.gs-bjk-page-loading-animation-bar {
+		width: calc(#{$large-device-background-image-width} - 20px);
+		margin-top: 120px;
+	}
+}
