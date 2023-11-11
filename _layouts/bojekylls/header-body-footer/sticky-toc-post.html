@@ -1,0 +1,20 @@
+---
+layout: bojekylls/header-body-footer/page
+---
+
+{% capture _sidebar %}
+	{% include bojekylls/components/toc.html toc=page.table-of-contents %}
+{% endcapture %}
+
+<div class="gs-bjk-sticky-sidebar">
+	<div class="gs-bjk-sticky-sidebar_sidebar-wrapper">
+		<nav class="gs-bjk-sticky-sidebar_sidebar">
+			<div class="gs-margin-top-20">
+				{{ _sidebar }}
+			</div>
+		</nav>
+	</div>
+	<div class="gs-bjk-sticky-sidebar_body">
+		{{ content }}
+	</div>
+</div>

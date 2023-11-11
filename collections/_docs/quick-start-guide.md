@@ -1,8 +1,43 @@
 ---
+layout: bojekylls/header-body-footer/sticky-toc-post
 author-id: 2
-title: Quick-Start Guide
+title: Quick-Start Guide 2
 tags: [jekyll, jekyll-theme, docs]
 date: 2022-12-18
+include-seo: false
+table-of-contents:
+  - title: Getting Started
+    children:
+      - title: "Quick-Start Guide"
+        url: /docs/quick-start-guide/
+      - title: "Structure"
+        url: /docs/structure/
+      - title: "Installation"
+        url: /docs/installation/
+      - title: "Upgrading"
+        url: /docs/upgrading/
+  - title: Customization
+    children:
+      - title: "Set Your Website Favicon"
+        url: /docs/set-your-website-favicon/
+      - title: "Overriding Theme Defaults"
+        url: /docs/overriding-theme-defaults/
+      - title: "Navigation"
+        url: /docs/navigation/
+      - title: "UI Text"
+        url: /docs/ui-text/
+      - title: "Authors"
+        url: /docs/authors/
+      - title: "Layouts"
+        url: /docs/layouts/
+  - title: Content
+    children:
+      - title: "Working with Collections"
+        url: /docs/working-with-collection/
+  - title: Demo
+    children:
+      - title: "Add Basic Post"
+        url: /demo/add-basic-post/
 ---
 
 * Quick-Start Guide

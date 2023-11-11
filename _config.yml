@@ -49,9 +49,6 @@ collections:
   demo:
     output: true
     permalink: /demo/:path/
-  explains:
-    output: true
-    permalink: /explains/:path/
   docs:
     output: true
     permalink: /docs/:path/
@@ -87,13 +84,6 @@ defaults:
     values:
       include-seo: true
       categories: [demo]
-  - scope:
-      type: docs
-    values:
-      layout: doc
-      sitemap: false
-      include-seo: false
-      categories: [documentation]
   - scope:
       path: assets/*
     values:
