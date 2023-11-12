@@ -1,4 +1,4 @@
-.#{$bjk-css-prefix}-linktree-page {
+.#{$bjk-css-prefix}-onlylinks-page {
 	padding-left: $viewport-left-padding;
 	padding-right: $viewport-right-padding;
 	
@@ -10,7 +10,7 @@
 		"b";
 }
 
-.#{$bjk-css-prefix}-linktree-page-header {
+.#{$bjk-css-prefix}-onlylinks-page-header {
 	min-height: 200px;
 	grid-area: h;
 	display: flex;
@@ -25,18 +25,18 @@
 	}
 }
 
-.#{$bjk-css-prefix}-linktree-page-body {
+.#{$bjk-css-prefix}-onlylinks-page-body {
 	grid-area: b;
 	width: 100%;
 }
 
-.#{$bjk-css-prefix}-linktree-buttons {
+.#{$bjk-css-prefix}-onlylinks-buttons {
 	display: grid;
 	grid-template-columns: 1fr;
 	row-gap: 20px;
 }
 
-.#{$bjk-css-prefix}-linktree-button {
+.#{$bjk-css-prefix}-onlylinks-button {
 	height: 4rem;
 	display: flex;
 	align-items: center;
@@ -49,7 +49,7 @@
 		margin-right: auto;
 	}
 }
-.#{$bjk-css-prefix}-linktree-button {
+.#{$bjk-css-prefix}-onlylinks-button {
 	height: 4rem;
 	
 	i {
@@ -58,14 +58,14 @@
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.#{$bjk-css-prefix}-linktree-page-body {
+	.#{$bjk-css-prefix}-onlylinks-page-body {
 		min-width: 648px;
 		max-width: 648px;
 	}
 }
 
 @media (min-width: $device-width-breakpoint-xlarge) {
-	.#{$bjk-css-prefix}-linktree-page {
+	.#{$bjk-css-prefix}-onlylinks-page {
 		padding-left: 0;
 		padding-right: 0;
 	}

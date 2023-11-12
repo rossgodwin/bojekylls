@@ -7,17 +7,21 @@ logo:
   relative-url: /
 
 menu:
-  - title: Docs & Demos
+  - title: More
     relative-url: #
     menu:
       - title: Docs
         relative-url: docs
         icon-relative-url: assets/images/site/navbar/construction.png
-        description: View all blog posts.
+        description: Documentation that will help you use and customize this theme.
       - title: Demo
         relative-url: demo
         icon-relative-url: assets/images/site/navbar/information-technology.png
-        description: View posts that demonstrate available site features.
+        description: View demonstrations of this features in this theme.
+      - title: Onlylinks
+        relative-url: links
+        icon-relative-url: assets/images/site/navbar/information-technology.png
+        description: Feature that lets you create a links only page i.e. linktree.
   - title: About
     relative-url: docs/about
   - title: Quick-Start-Guide
