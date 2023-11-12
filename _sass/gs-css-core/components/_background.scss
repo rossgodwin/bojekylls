@@ -1,11 +1,11 @@
-.gs-background-color-white {
+.#{$gs-css-prefix}-background-color-white {
 	background: $color-white;
 }
 
-.gs-background-color-palegreen2 {
+.#{$gs-css-prefix}-background-color-palegreen2 {
 	background: $color-palegreen2;
 }
 
-.gs-background-color-gray98 {
+.#{$gs-css-prefix}-background-color-gray98 {
 	background: $color-gray98;
 }

@@ -4,14 +4,14 @@
 	}
 }
 
-.gs-link-no-underline {
+.#{$gs-css-prefix}-link-no-underline {
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
 	}
 }
 
-.gs-link-underline {
+.#{$gs-css-prefix}-link-underline {
 	text-decoration: underline;
 	&:hover {
 		text-decoration: underline;

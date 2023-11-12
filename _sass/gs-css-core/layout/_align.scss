@@ -3,32 +3,32 @@
 	margin-right: auto;
 }
 
-.gs-margin-align-horizontal-center {
+.#{$gs-css-prefix}-margin-align-horizontal-center {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.gs-margin-align-horizontal-left {
+.#{$gs-css-prefix}-margin-align-horizontal-left {
 	margin-right: auto;
 }
 
-.gs-margin-align-horizontal-right {
+.#{$gs-css-prefix}-margin-align-horizontal-right {
 	margin-left: auto;
 }
 
-.gs-text-align-horizontal-center {
+.#{$gs-css-prefix}-text-align-horizontal-center {
 	text-align: center;
 }
 
-.gs-text-align-horizontal-left {
+.#{$gs-css-prefix}-text-align-horizontal-left {
 	text-align: left;
 }
 
-.gs-text-align-horizontal-right {
+.#{$gs-css-prefix}-text-align-horizontal-right {
 	text-align: right;
 }
 
-.gs-grid-align-vertical-center {
+.#{$gs-css-prefix}-grid-align-vertical-center {
 	display: grid;
 	grid-template-columns: 1fr;
 	align-items: center;

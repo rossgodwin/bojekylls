@@ -1,15 +1,15 @@
-.gs-text-underline {
+.#{$gs-css-prefix}-text-underline {
 	text-decoration: underline !important;
 }
 
-.gs-text-uppercase {
+.#{$gs-css-prefix}-text-uppercase {
 	text-transform: uppercase;
 }
 
-.gs-text-bold {
+.#{$gs-css-prefix}-text-bold {
 	font-weight: bold;
 }
 
-.gs-text-b16-m2 {
+.#{$gs-css-prefix}-text-b16-m2 {
 	font-size: 0.875rem;
 }

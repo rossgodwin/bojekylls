@@ -1,4 +1,4 @@
-.gs-bjk-site-footer {
+.#{$bjk-css-prefix}-site-footer {
 	padding-left: $viewport-left-padding;
 	padding-right: $viewport-right-padding;
 	
@@ -12,7 +12,7 @@
 	}
 }
 
-.gs-bjk-site-footer-icon-links {
+.#{$bjk-css-prefix}-site-footer-icon-links {
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -31,7 +31,7 @@
 	}
 }
 
-.gs-bjk-site-footer-text-links {
+.#{$bjk-css-prefix}-site-footer-text-links {
 	@include themify() {
 		@include _styleLinkApplySameColorToAllStates(v(page-footer-text-color));
 	}
@@ -54,20 +54,20 @@
 	}
 }
 
-.gs-bjk-site-footer-line1 {
+.#{$bjk-css-prefix}-site-footer-line1 {
 	@include themify() {
 		@include _styleLinkApplySameColorToAllStates(v(page-footer-text-color));
 	}
 }
 
-.gs-bjk-site-footer-line2 {
+.#{$bjk-css-prefix}-site-footer-line2 {
 	@include themify() {
 		@include _styleLinkApplySameColorToAllStates(v(page-footer-text-color));
 	}
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.gs-bjk-site-footer-icon-links {
+	.#{$bjk-css-prefix}-site-footer-icon-links {
 		span {
 			font-size: 2em;
 		}
@@ -75,7 +75,7 @@
 }
 
 @media (min-width: $device-width-breakpoint-xlarge) {
-	.gs-bjk-site-footer {
+	.#{$bjk-css-prefix}-site-footer {
 		min-width: $viewport-content-max-width;
 		max-width: $viewport-content-max-width;
 		@include _marginAlignHorizontalCenter;

@@ -21,10 +21,10 @@
 	}
 }
 
-.gs-button-left-icon {
+.#{$gs-css-prefix}-button-left-icon {
 	margin-right: 8px;
 }
 
-.gs-button-right-icon {
+.#{$gs-css-prefix}-button-right-icon {
 	margin-left: 8px;
 }

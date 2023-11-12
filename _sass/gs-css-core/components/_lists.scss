@@ -1,10 +1,10 @@
-.gs-list-no-style {
+.#{$gs-css-prefix}-list-no-style {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.gs-list-item-margin-bottom-16 {
+.#{$gs-css-prefix}-list-item-margin-bottom-16 {
 	li:not(:last-child) {
 		margin-bottom: 16px;
 	}

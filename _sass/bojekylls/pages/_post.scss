@@ -1,17 +1,17 @@
-.gs-bjk-post-page {
+.#{$bjk-css-prefix}-post-page {
 	margin-top: 1rem;
 }
 
-.gs-bjk-post-page-body {
+.#{$bjk-css-prefix}-post-page-body {
 	.jkt-blockquote {
 		margin-bottom: 0.5rem;
 	}
 	
 	> h1 {
-		@extend .gs-bjk-heading;
+		@extend .#{$bjk-css-prefix}-heading;
 	}
 	> h2, > h3, > h4, > h5, > h6 {
-		@extend .gs-bjk-heading;
+		@extend .#{$bjk-css-prefix}-heading;
 		margin-top: 1rem;
 	}
 	
@@ -36,18 +36,18 @@
 	}
 }
 
-.gs-bjk-post-thumbnails {
+.#{$bjk-css-prefix}-post-thumbnails {
 	margin-right: 25px;
 	margin-bottom: 25px;
 	padding: 10px;
 }
 
 @media (min-width: $device-width-breakpoint-large) {
-	.gs-bjk-post-page-body {
+	.#{$bjk-css-prefix}-post-page-body {
 		float: none;
 	}
 	
-	.gs-bjk-post-thumbnails {
+	.#{$bjk-css-prefix}-post-thumbnails {
 		float: left;
 		width: 450px;
 	}

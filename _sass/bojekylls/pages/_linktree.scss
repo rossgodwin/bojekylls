@@ -1,4 +1,4 @@
-.gs-bjk-linktree-page {
+.#{$bjk-css-prefix}-linktree-page {
 	padding-left: $viewport-left-padding;
 	padding-right: $viewport-right-padding;
 	
@@ -10,7 +10,7 @@
 		"b";
 }
 
-.gs-bjk-linktree-page-header {
+.#{$bjk-css-prefix}-linktree-page-header {
 	min-height: 200px;
 	grid-area: h;
 	display: flex;
@@ -25,18 +25,18 @@
 	}
 }
 
-.gs-bjk-linktree-page-body {
+.#{$bjk-css-prefix}-linktree-page-body {
 	grid-area: b;
 	width: 100%;
 }
 
-.gs-bjk-linktree-buttons {
+.#{$bjk-css-prefix}-linktree-buttons {
 	display: grid;
 	grid-template-columns: 1fr;
 	row-gap: 20px;
 }
 
-.gs-bjk-linktree-button {
+.#{$bjk-css-prefix}-linktree-button {
 	height: 4rem;
 	display: flex;
 	align-items: center;
@@ -49,7 +49,7 @@
 		margin-right: auto;
 	}
 }
-.gs-bjk-linktree-button {
+.#{$bjk-css-prefix}-linktree-button {
 	height: 4rem;
 	
 	i {
@@ -58,14 +58,14 @@
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.gs-bjk-linktree-page-body {
+	.#{$bjk-css-prefix}-linktree-page-body {
 		min-width: 648px;
 		max-width: 648px;
 	}
 }
 
 @media (min-width: $device-width-breakpoint-xlarge) {
-	.gs-bjk-linktree-page {
+	.#{$bjk-css-prefix}-linktree-page {
 		padding-left: 0;
 		padding-right: 0;
 	}

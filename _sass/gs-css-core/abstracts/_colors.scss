@@ -12,10 +12,10 @@ $color-gray84: #d6d6d6;
 $color-gray94: #f0f0f0;
 $color-gray98: #fafafa;
 
-.gs-color-black {
+.#{$gs-css-prefix}-color-black {
 	color: $color-black;
 }
 
-.gs-color-white {
+.#{$gs-css-prefix}-color-white {
 	color: $color-white;
 }

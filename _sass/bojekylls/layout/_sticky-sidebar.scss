@@ -1,7 +1,7 @@
 $medium-device-sidebar-width: 200px;
 $large-device-sidebar-width: 300px;
 
-.gs-bjk-sticky-sidebar {
+.#{$bjk-css-prefix}-sticky-sidebar {
 	grid-template-areas:
 		// h = header
 		// c = content
@@ -10,22 +10,22 @@ $large-device-sidebar-width: 300px;
 		"c";
 }
 
-.gs-bjk-sticky-sidebar_sidebar-wrapper {
+.#{$bjk-css-prefix}-sticky-sidebar_sidebar-wrapper {
 	grid-area: n;
 }
 
-.gs-bjk-sticky-sidebar_body {
+.#{$bjk-css-prefix}-sticky-sidebar_body {
 	grid-area: c;
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.gs-bjk-sticky-sidebar_sidebar-wrapper {
+	.#{$bjk-css-prefix}-sticky-sidebar_sidebar-wrapper {
 		width: $medium-device-sidebar-width;
 		position: absolute;
 		top: $medium-device-page-header-height;
 	}
 	
-	.gs-bjk-sticky-sidebar_sidebar {
+	.#{$bjk-css-prefix}-sticky-sidebar_sidebar {
 		//height: 100%;
 		max-height: calc(100vh - 5em);
 		width: $medium-device-sidebar-width;
@@ -35,21 +35,21 @@ $large-device-sidebar-width: 300px;
 		overflow-y: auto;
 	}
 	
-	.gs-bjk-sticky-sidebar_body {
+	.#{$bjk-css-prefix}-sticky-sidebar_body {
 		margin-left: $medium-device-sidebar-width;
 	}
 }
 
 @media (min-width: $device-width-breakpoint-xlarge) {
-	.gs-bjk-sticky-sidebar_sidebar-wrapper {
+	.#{$bjk-css-prefix}-sticky-sidebar_sidebar-wrapper {
 		width: $large-device-sidebar-width;
 	}
 	
-	.gs-bjk-sticky-sidebar_sidebar {
+	.#{$bjk-css-prefix}-sticky-sidebar_sidebar {
 		width: $large-device-sidebar-width;
 	}
 	
-	.gs-bjk-sticky-sidebar_body {
+	.#{$bjk-css-prefix}-sticky-sidebar_body {
 		margin-left: $large-device-sidebar-width;
 	}
 }

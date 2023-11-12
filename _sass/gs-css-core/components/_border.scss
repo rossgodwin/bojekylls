@@ -1,43 +1,43 @@
-.gs-border-color-palegreen2 {
+.#{$gs-css-prefix}-border-color-palegreen2 {
 	border-color: $color-palegreen2;
 }
 
-.gs-border-color-gray84 {
+.#{$gs-css-prefix}-border-color-gray84 {
 	border-color: $color-gray84;
 }
 
-.gs-border-color-gray94 {
+.#{$gs-css-prefix}-border-color-gray94 {
 	border-color: $color-gray94;
 }
 
-.gs-border-solid-1 {
+.#{$gs-css-prefix}-border-solid-1 {
 	border-style: solid;
 	border-width: 1px;
 }
 
-.gs-border-solid-2 {
+.#{$gs-css-prefix}-border-solid-2 {
 	border-style: solid;
 	border-width: 2px;
 }
 
-.gs-border-top-dotted-1 {
+.#{$gs-css-prefix}-border-top-dotted-1 {
 	border-style: dotted;
 	border-width: 1px 0 0 0;
 }
 
-.gs-border-rounded-5 {
+.#{$gs-css-prefix}-border-rounded-5 {
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 5px;
 }
 
-.gs-border-rounded-10 {
+.#{$gs-css-prefix}-border-rounded-10 {
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 10px;
 }
 
-.gs-border-rounded-20 {
+.#{$gs-css-prefix}-border-rounded-20 {
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 20px;

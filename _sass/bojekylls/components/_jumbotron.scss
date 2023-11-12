@@ -1,4 +1,4 @@
-.gs-bjk-jumbotron {
+.#{$bjk-css-prefix}-jumbotron {
 	position: relative;
 	clear: both;
 	background-size: cover;
@@ -6,7 +6,7 @@
 	background-position: center;
 }
 
-.gs-bjk-jumbotron-content {
+.#{$bjk-css-prefix}-jumbotron-content {
 	height: 400px;
 	padding-left: $viewport-left-padding;
 	padding-right: $viewport-right-padding;
@@ -14,7 +14,7 @@
 }
 
 @media (min-width: $device-width-breakpoint-xlarge) {
-	.gs-bjk-jumbotron-content {
+	.#{$bjk-css-prefix}-jumbotron-content {
 		min-width: $viewport-content-max-width;
 		max-width: $viewport-content-max-width;
 		@include _marginAlignHorizontalCenter;

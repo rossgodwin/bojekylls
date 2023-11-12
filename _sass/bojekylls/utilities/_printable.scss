@@ -6,10 +6,10 @@ body {
 	min-width: 992px;
 }
 
-.gs-bjk-page-header {
+.#{$bjk-css-prefix}-page-header {
 	display: none;
 }
 
-.gs-bjk-page-footer {
+.#{$bjk-css-prefix}-page-footer {
 	display: none;
 }

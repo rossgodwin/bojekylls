@@ -37,46 +37,46 @@
 	width: $grid-3c-column-width;
 }
 
-.gs-mgrid-2c {
+.#{$gs-css-prefix}-mgrid-2c {
 	@include _make1ColumnMGrid();
 }
 
-.gs-mgrid-3c {
+.#{$gs-css-prefix}-mgrid-3c {
 	@include _make1ColumnMGrid();
 }
 
-.gs-mgrid-2c-item {
+.#{$gs-css-prefix}-mgrid-2c-item {
 	@include _make1ColumnMGridColumn();
 }
 
-.gs-mgrid-3c-item {
+.#{$gs-css-prefix}-mgrid-3c-item {
 	@include _make1ColumnMGridColumn();
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.gs-mgrid-2c {
+	.#{$gs-css-prefix}-mgrid-2c {
 		@include _make2ColumnMGrid();
 	}
 	
-	.gs-mgrid-2c-item {
+	.#{$gs-css-prefix}-mgrid-2c-item {
 		@include _make2ColumnMGridColumn();
 	}
 	
-	.gs-mgrid-3c {
+	.#{$gs-css-prefix}-mgrid-3c {
 		@include _make2ColumnMGrid();
 	}
 	
-	.gs-mgrid-3c-item {
+	.#{$gs-css-prefix}-mgrid-3c-item {
 		@include _make2ColumnMGridColumn();
 	}
 }
 
 @media (min-width: $device-width-breakpoint-large) {
-	.gs-mgrid-3c {
+	.#{$gs-css-prefix}-mgrid-3c {
 		@include _make3ColumnMGrid();
 	}
 	
-	.gs-mgrid-3c-item {
+	.#{$gs-css-prefix}-mgrid-3c-item {
 		@include _make3ColumnMGridColumn();
 	}
 }

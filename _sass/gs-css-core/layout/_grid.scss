@@ -16,28 +16,28 @@
 	row-gap: $grid-row-gap;
 }
 
-.gs-grid-2c {
+.#{$gs-css-prefix}-grid-2c {
 	display: grid;
 	@include _make1ColumnGrid();
 }
 
-.gs-grid-3c {
+.#{$gs-css-prefix}-grid-3c {
 	display: grid;
 	@include _make1ColumnGrid();
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.gs-grid-2c {
+	.#{$gs-css-prefix}-grid-2c {
 		@include _make2ColumnGrid();
 	}
 	
-	.gs-grid-3c {
+	.#{$gs-css-prefix}-grid-3c {
 		@include _make2ColumnGrid();
 	}
 }
 
 @media (min-width: $device-width-breakpoint-large) {
-	.gs-grid-3c {
+	.#{$gs-css-prefix}-grid-3c {
 		@include _make3ColumnGrid();
 	}
 }

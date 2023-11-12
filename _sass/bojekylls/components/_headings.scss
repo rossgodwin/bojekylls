@@ -1,4 +1,4 @@
-.gs-bjk-heading {
+.#{$bjk-css-prefix}-heading {
 	letter-spacing: 0.15rem;
 	text-transform: uppercase;
 	@include themify() {
@@ -6,8 +6,8 @@
 	}
 }
 
-.gs-bjk-heading-vertical-bar {
-	@extend .gs-bjk-heading;
+.#{$bjk-css-prefix}-heading-vertical-bar {
+	@extend .#{$bjk-css-prefix}-heading;
 	position: relative;
 	padding-left: 1rem;
 	&:before {
@@ -24,8 +24,8 @@
    }
 }
 
-.gs-bjk-heading-line-separator {
-	@extend .gs-bjk-heading;
+.#{$bjk-css-prefix}-heading-line-separator {
+	@extend .#{$bjk-css-prefix}-heading;
 	display: grid;
 	width: 100%;
 	align-items: center;
