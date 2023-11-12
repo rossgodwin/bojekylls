@@ -1,6 +1,6 @@
 ---
 layout: bojekylls/header-body-footer/post
-author-id: 1
+author-alias: jdoe
 title: Add Post with Image
 include-seo: true
 image-path: assets/images/blog/add-post-with-image/banner.png

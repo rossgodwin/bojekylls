@@ -1,9 +1,10 @@
 ---
 layout: bojekylls/header-body-footer/page
+include-seo: true
 ---
 
 {% capture _sidebar %}
-	{% include bojekylls/components/toc.html toc=page.table-of-contents %}
+	{% include bojekylls/components/table-of-contents.html toc=site.data.docs.table-of-contents %}
 {% endcapture %}
 
 <div class="gs-bjk-sticky-sidebar">

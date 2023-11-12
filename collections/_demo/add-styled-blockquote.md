@@ -1,6 +1,6 @@
 ---
 layout: bojekylls/header-body-footer/post
-author-id: 1
+author-alias: jdoe
 title: Add a Styled Blockquote
 include-seo: true
 image-path: assets/images/blog/add-styled-blockquote/banner.jpg

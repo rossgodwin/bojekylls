@@ -1,6 +1,6 @@
 ---
 layout: bojekylls/header-body-footer/post
-author-id: 1
+author-alias: jdoe
 title: Post with Photo Gallery
 include-seo: true
 image-path: assets/images/blog/post-with-photo-gallery/banner.png

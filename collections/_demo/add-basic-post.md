@@ -1,6 +1,6 @@
 ---
 layout: bojekylls/header-body-footer/post
-author-id: 2
+author-alias: jsmith
 title: Add Basic Post
 include-seo: true
 categories: [demo]

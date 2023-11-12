@@ -1,5 +1,5 @@
-- id: 1
+- alias: jdoe
   name: John Doe
-- id: 2
+- alias: jsmith
   name: Joe Smith
   avatar-relative-url: assets/images/blog/authors/joe-smith/avatar.png

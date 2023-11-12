@@ -7,11 +7,11 @@ logo:
   relative-url: /
 
 menu:
-  - title: Blog
+  - title: Docs & Demos
     relative-url: #
     menu:
-      - title: Posts
-        relative-url: /
+      - title: Docs
+        relative-url: docs
         icon-relative-url: assets/images/site/navbar/construction.png
         description: View all blog posts.
       - title: Demo
@@ -19,6 +19,6 @@ menu:
         icon-relative-url: assets/images/site/navbar/information-technology.png
         description: View posts that demonstrate available site features.
   - title: About
-    relative-url: about
+    relative-url: docs/about
   - title: Quick-Start-Guide
     relative-url: docs/quick-start-guide

@@ -1,6 +1,6 @@
 ---
 layout: bojekylls/header-body-footer/post
-author-id: 2
+author-alias: jsmith
 title: Post with Author Picture
 include-seo: true
 image-path: assets/images/blog/post-with-author-avatar/banner.png

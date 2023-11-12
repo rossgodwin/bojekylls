@@ -5,7 +5,7 @@ layout: bojekylls/header-body-footer/page
 {% capture _items-content %}
 	{% for post in paginator.posts %}
 		{% assign collection = post-url-array[post-url-array-index] | capitalize | replace: "-", " " %}
-		{% assign authors-where-exp = post.author-id | append: '' | prepend: 'item.id == ' %}
+		{% assign authors-where-exp = post.author-alias | append: "'" | prepend: "item.alias == '" %}
 		{% assign author = site.data.bojekylls.blog-authors | where_exp: 'item', authors-where-exp | first %}
 		
 		{% include gs-jekyll-core/utils/prepend-baseurl.html path=post.url %}
