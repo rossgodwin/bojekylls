@@ -106,14 +106,13 @@ pagination:
 autopages:
   enabled: true
   tags:
-    enabled: false
+    enabled: true
     layouts:
-      - autopage_tags.html
-    permalink: /tag/:tag
+      - ap-demo-topics.html
   categories:
     enabled: false
     layouts:
-      - autopage_category.html
+      - ap-all-categories.html
   collections:
     enabled: false
     slugify:

@@ -2,49 +2,16 @@
 layout: bojekylls/header-body-footer/page
 ---
 
+{{ content }}
+
 {% capture _items-content %}
 	{% for post in paginator.posts %}
-		{% assign collection = post-url-array[post-url-array-index] | capitalize | replace: "-", " " %}
-		{% assign authors-where-exp = post.author-alias | append: "'" | prepend: "item.alias == '" %}
-		{% assign author = site.data.bojekylls.blog-authors | where_exp: 'item', authors-where-exp | first %}
-		
-		{% include gs-jekyll-core/utils/prepend-baseurl.html path=post.url %}
-		{% assign post-url = __return %}
-		{% assign post-url-array = post-url | remove:'/index.html' | split: '/' | compact %}
-		{% assign post-url-array-index = post-url-array.size | minus: 2 %}
-		{% assign category = post-url-array[post-url-array-index] | capitalize | replace: "-", " " %}
-		
-		{% if post.description %}
-			{% assign post-description = post.description %}
-		{% else if post.excerpt %}
-			{% assign post-description = post.excerpt %}
-		{% endif %}
-		
-		<div class="gs-mgrid-3c-item gs-bjk-page-posts-grid-item gs-background-color-white">
-			<div class="gs-position-relative gs-margin-align-horizontal-right gs-text-align-horizontal-right">
-				{% if post.image-path %}
-					<img src="{{ post.image-path | relative_url }}" alt="{{ post.title }}">
-				{% endif %}
-				<div class="gs-margin-top-10 gs-margin-right-10 gs-bjk-badge gs-bjk-badge-color-blue-midnight{% if post.image-path %} gs-position-top-right{% endif%} gs-text-uppercase">{{ category }}</div>
-			</div>
-			<div class="gs-bjk-page-posts-article-body">
-				<h5><a href="{{ post-url }}">{{ post.title }}</a></h5>
-				<p>
-					{{ post-description | strip_html }}
-				</p>
-			</div>
-			<div class="gs-bjk-page-posts-article-footer gs-bjk-page-posts-article-top-delimiter">
-				{% if author.avatar-relative-url %}
-					<div class="gs-bjk-page-posts-article-author-avatar">
-						<img src="{{ author.avatar-relative-url | relative_url }}" alt="{{ post.title }}">
-					</div>
-				{% endif %}
-				<span>{{ author.name }}&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
-			</div>
-		</div>
+		{% include bojekylls/components/paginator/post-mgrid-item.html %}
 	{% endfor %}
 {% endcapture %}
 
 {% include gs-jekyll-core/layout/3c-mgrid.html items-content=_items-content %}
 
-{% include bojekylls/components/paginator-buttons.html %}
+<div class="gs-margin-top-15">
+	{% include bojekylls/components/paginator/navigation-buttons.html %}
+</div>

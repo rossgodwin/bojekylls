@@ -17,9 +17,9 @@ layout: bojekylls/header-body-footer/page
 			Published:&nbsp;{{ page.date | date: "%b %-d, %Y" }}
 			{% if page.tags %}
 				<br>
-				<span>Tags:&nbsp;
+				<span>Tags:
 				{% for tag in page.tags %}
-					<a href="{{ tag | prepend: 'tags/#' | relative_url }}">{{ tag }}</a>&nbsp;
+					&nbsp;<a href="{{ page.collection | append: '/topic/' | append: tag | relative_url }}">{{ tag }}</a>
 				{% endfor %}
 				</span>
 			{% endif %}
