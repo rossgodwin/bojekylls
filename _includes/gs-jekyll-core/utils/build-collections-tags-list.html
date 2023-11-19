@@ -1,0 +1,13 @@
+{% assign collections-tags = '' | split: '' %}
+
+{% for collection in site.collections %}
+	{% if include.collection == nil or include.collection == 'all' or collection.label == include.collection %}
+		{% for item in site[collection.label] %}
+			{% for tag in item.tags %}
+				{% assign collections-tags = collections-tags | push: tag %}
+			{% endfor %}
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+
+{% assign collections-tags = collections-tags | uniq | sort %}

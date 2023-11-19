@@ -19,7 +19,9 @@ layout: bojekylls/header-body-footer/page
 				<br>
 				<span>Tags:
 				{% for tag in page.tags %}
-					&nbsp;<a href="{{ page.collection | append: '/topic/' | append: tag | relative_url }}">{{ tag }}</a>
+					{% include bojekylls/utils/build-collection-tag-relative-url.html collection=page.collection tag=tag %}
+					
+					&nbsp;<a href="{{ __return }}">{{ tag }}</a>
 				{% endfor %}
 				</span>
 			{% endif %}

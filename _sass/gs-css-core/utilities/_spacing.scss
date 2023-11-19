@@ -1,39 +1,19 @@
-.#{$gs-css-prefix}-margin-10 {
-	margin: 10px;
+@mixin _generateSpacingProperty($prefix, $spacing, $lower-range, $upper-range, $property) {
+	@for $i from $lower-range through $upper-range {
+		$size: $i;
+		
+		.#{$prefix}-#{$size} {
+			#{$property}: $spacing * $size;
+		}
+		
+		//@debug #{$prefix}-#{$size}
+	}
 }
 
-.#{$gs-css-prefix}-margin-top-10 {
-	margin-top: 10px;
-}
+@include _generateSpacingProperty(#{$gs-css-prefix} + '-margin', 1px, 0, 100, margin);
+@include _generateSpacingProperty(#{$gs-css-prefix} + '-margin-top', 1px, 0, 100, margin-top);
+@include _generateSpacingProperty(#{$gs-css-prefix} + '-margin-right', 1px, 0, 100, margin-right);
+@include _generateSpacingProperty(#{$gs-css-prefix} + '-margin-left', 1px, 0, 100, margin-left);
+@include _generateSpacingProperty(#{$gs-css-prefix} + '-margin-bottom', 1px, 0, 100, margin-bottom);
 
-.#{$gs-css-prefix}-margin-top-15 {
-	margin-top: 15px;
-}
-
-.#{$gs-css-prefix}-margin-top-20 {
-	margin-top: 20px;
-}
-
-.#{$gs-css-prefix}-margin-right-10 {
-	margin-right: 10px;
-}
-
-.#{$gs-css-prefix}-margin-right-20 {
-	margin-right: 20px;
-}
-
-.#{$gs-css-prefix}-margin-bottom-10 {
-	margin-bottom: 10px;
-}
-
-.#{$gs-css-prefix}-margin-bottom-20 {
-	margin-bottom: 20px;
-}
-
-.#{$gs-css-prefix}-padding-10 {
-	padding: 10px;
-}
-
-.#{$gs-css-prefix}-padding-20 {
-	padding: 20px;
-}
+@include _generateSpacingProperty(#{$gs-css-prefix} + '-padding', 1px, 0, 20, padding);

@@ -32,7 +32,7 @@ masonry-grids: true
 				</div>
 			</div>
 			<div>
-				<div class="gs-background-color-white gs-border-rounded-20 gs-border-color-gray84 gs-bjk-border-box-shadow-gray84 gs-padding-20 gs-text-align-horizontal-center" data-aos="fade-up">
+				<div class="gs-background-color-white gs-border-rounded-20 gs-border-color-gray84 gs-bjk-border-box-shadow-gray84 gs-padding-20 gs-text-align-horizontal-center" data-aos="fade-down">
 					<img src="{{ '/assets/images/pages/home/info.png' | relative_url}}" style="width: 97px; height: 97px;" />
 					<h3>Documentation</h3>
 					<p>This theme is thoroughly documentation and helps walk you through the several features and how you can customize it for your need.</p>
@@ -47,6 +47,20 @@ masonry-grids: true
 					<a class="gs-bjk-button gs-bjk-button-outline-blue" href="/about">Learn More</a>
 				</div>
 			</div>
+		</div>
+		
+		<div class="gs-margin-top-75" data-aos="fade-up">
+			<h3 class="gs-bjk-heading-line-separator">Topics</h3>
+			
+			{% include gs-jekyll-core/utils/build-collections-tags-list.html collection='demo' %}
+			
+			<ul class="gs-margin-top-20 gs-list-no-style gs-list-inline gs-list-item-margin-right-10 gs-list-item-margin-bottom-10">
+				{% for tag in collections-tags %}
+					{% include bojekylls/utils/build-collection-tag-relative-url.html collection='demo' tag=tag %}
+					
+					<li><a class="gs-bjk-button gs-bjk-button-outline-blue" href="{{ __return }}">{{ tag }}</a></li>
+				{% endfor %}
+			</ul>
 		</div>
 	</section>
 </div>

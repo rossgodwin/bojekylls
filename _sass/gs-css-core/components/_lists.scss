@@ -4,6 +4,24 @@
 	padding: 0;
 }
 
+.#{$gs-css-prefix}-list-inline {
+	li {
+		display: inline-block;
+	}
+}
+
+.#{$gs-css-prefix}-list-item-margin-right-10 {
+	li:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+
+.#{$gs-css-prefix}-list-item-margin-bottom-10 {
+	li:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
 .#{$gs-css-prefix}-list-item-margin-bottom-16 {
 	li:not(:last-child) {
 		margin-bottom: 16px;
