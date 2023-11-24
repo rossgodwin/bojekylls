@@ -11,9 +11,9 @@ google_analytics_measurement_id: ''
 show_drafts: false
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
+#  syntax_highlighter: rouge
+#  syntax_highlighter_opts:
+#    css_class: 'highlight'
 include:
   - _pages
 exclude:
@@ -84,6 +84,11 @@ defaults:
     values:
       include-seo: true
       categories: [demo]
+  - scope:
+      type: docs
+    values:
+      syntax-highlighter-on: true
+      categories: [docs]
   - scope:
       path: assets/*
     values:

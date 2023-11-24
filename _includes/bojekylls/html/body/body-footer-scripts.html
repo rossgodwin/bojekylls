@@ -5,8 +5,8 @@
 
 {% assign jscript-relative-urls = jscript-relative-urls | push: 'assets/bojekylls/libs/aos-3.0.0-beta.6/js/aos.min.js' %}
 
-{% if page.include-highlightjs %}
-	{% assign jscript-relative-urls = jscript-relative-urls | push: 'assets/bojekylls/libs/highlightjs/js/highlight-10.0.3.min.js' %}
+{% if page.syntax-highlighter-on %}
+	{% assign jscript-relative-urls = jscript-relative-urls | push: 'assets/bojekylls/libs/prismjs-1.29.0/js/prism.min.js' %}
 {% endif %}
 
 {% if page.galleries %}
@@ -114,12 +114,6 @@
 					);
 				{% endif %}
 			{% endfor %}
-		{% endif %}
-		
-		{% if page.include-highlightjs %}
-			document.querySelectorAll('pre code').forEach((block) => {
-				hljs.highlightBlock(block);
-			});
 		{% endif %}
 		
 		{% if page.simple-searches %}

@@ -31,6 +31,8 @@ table-of-contents:
         url: /docs/authors/
       - title: Layouts
         url: /docs/layouts/
+      - title: Onlylinks Layout
+        url: /docs/onlylinks-layout
   - title: Content
     children:
       - title: Working with Collections

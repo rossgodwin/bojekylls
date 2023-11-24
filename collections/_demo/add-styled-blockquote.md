@@ -7,7 +7,7 @@ primary-image-relative-url: assets/images/blog/add-styled-blockquote/banner.jpg
 categories: [demo]
 tags: [jekyll, theme-example-feature]
 date: 2018-01-03
-include-highlightjs: yes
+syntax-highlighter-on: yes
 ---
 
 Here is a example of how to add a block quote.
@@ -24,8 +24,8 @@ Here is a example of how to add a block quote.
 {% include bojekylls/components/quote.html quote=_quote quote_by='Kelly Clarkson' %}
 
 
-1) Add 'include-highlightjs: yes' in the page frontmatter
-{% capture _html %}
-	include-highlightjs: yes
-{% endcapture %}
-{% include bojekylls/components/html-source-code-block.html html=_html %}
+1) Add 'syntax-highlighter-on: true' in the page frontmatter
+{% capture _code %}---
+syntax-highlighter-on: yes
+---{% endcapture %}
+{% include bojekylls/components/syntax-highlighter.html code-class='language-markup' code=_code %}
