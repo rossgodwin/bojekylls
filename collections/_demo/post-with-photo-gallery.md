@@ -1,11 +1,11 @@
 ---
-layout: bojekylls/header-body-footer/post
+layout: bojekylls/header-body-footer/post/default
 author-alias: jdoe
 title: Post with Photo Gallery
 include-seo: true
-image-path: assets/images/blog/post-with-photo-gallery/banner.png
-image-by-name: Amanda Sowers
-image-credit-url: https://pixabay.com/users/amandasowers-1974449/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1597095
+primary-image-relative-url: assets/images/blog/post-with-photo-gallery/banner.png
+primary-image-author-name: Amanda Sowers
+primary-image-author-url: https://pixabay.com/users/amandasowers-1974449/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1597095
 categories: [demo]
 tags: [jekyll, demo, photo gallery]
 date: 2023-03-04

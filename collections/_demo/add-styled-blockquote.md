@@ -1,9 +1,9 @@
 ---
-layout: bojekylls/header-body-footer/post
+layout: bojekylls/header-body-footer/post/default
 author-alias: jdoe
 title: Add a Styled Blockquote
 include-seo: true
-image-path: assets/images/blog/add-styled-blockquote/banner.jpg
+primary-image-relative-url: assets/images/blog/add-styled-blockquote/banner.jpg
 categories: [demo]
 tags: [jekyll, theme-example-feature]
 date: 2018-01-03

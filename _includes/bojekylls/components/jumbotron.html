@@ -13,4 +13,9 @@
 	<section class="gs-bjk-jumbotron-content">
 		{{ include.content }}
 	</section>
+	
+	{% include bojekylls/components/image-author-credit-badge.html
+		image-author-name=include.background-image-author-name
+		image-author-url=include.background-image-author-url
+	%}
 </div>

@@ -1,0 +1,28 @@
+---
+layout: bojekylls/header-body-footer/default
+---
+
+{% if page.primary-image-relative-url %}
+	{% include bojekylls/components/jumbotron.html
+		background-image-relative-url=page.primary-image-relative-url
+		background-image-author-name=page.primary-image-author-name
+		background-image-author-url=page.primary-image-author-url %}
+{% endif %}
+
+<section class="gs-bjk-page-content gs-bjk-post-page">
+	{% include bojekylls/components/post/post-header.html
+		post-title=page.title
+		post-date=page.date
+		post-tags=page.tags
+		post-collection=page.collection
+	%}
+	
+	<div class="gs-bjk-post-page-body">
+		{% include bojekylls/components/post/post-gallery-thumbnails.html
+			post-galleries=page.galleries
+			post-thumbnail-gallery-width=page.thumbnail-gallery-width
+		%}
+		
+		{{ content }}
+	</div>
+</section>

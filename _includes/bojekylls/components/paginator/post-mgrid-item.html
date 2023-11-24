@@ -16,10 +16,10 @@
 
 <div class="gs-mgrid-3c-item gs-bjk-page-posts-grid-item gs-background-color-white">
 	<div class="gs-position-relative gs-margin-align-horizontal-right gs-text-align-horizontal-right">
-		{% if post.image-path %}
-			<img src="{{ post.image-path | relative_url }}" alt="{{ post.title }}">
+		{% if post.primary-image-relative-url %}
+			<img src="{{ post.primary-image-relative-url | relative_url }}" alt="{{ post.title }}">
 		{% endif %}
-		<div class="gs-margin-top-10 gs-margin-right-10 gs-bjk-badge gs-bjk-badge-color-blue-midnight{% if post.image-path %} gs-position-top-right{% endif%} gs-text-uppercase">{{ category }}</div>
+		<div class="gs-margin-top-10 gs-margin-right-10 gs-bjk-badge gs-bjk-badge-color-blue-midnight{% if post.primary-image-relative-url %} gs-position-top-right{% endif%} gs-text-uppercase">{{ category }}</div>
 	</div>
 	<div class="gs-bjk-page-posts-article-body">
 		<h5><a href="{{ post-url }}">{{ post.title }}</a></h5>

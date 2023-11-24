@@ -1,5 +1,5 @@
 ---
-layout: bojekylls/header-body-footer/post
+layout: bojekylls/header-body-footer/post/default
 author-alias: jsmith
 title: Add a Onlylinks Page
 include-seo: true

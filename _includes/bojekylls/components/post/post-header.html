@@ -1,0 +1,18 @@
+<header>
+	<h2 class="gs-bjk-heading-vertical-bar">{{ include.post-title | escape }}</h2>
+	<div class="gs-text-b16-m2 gs-bjk-text-color-scaled-down-size">
+		Published:&nbsp;{{ include.post-date | date: "%b %-d, %Y" }}
+		
+		{% if include.post-tags %}
+			<ul class="gs-list-no-style gs-list-inline gs-list-item-margin-right-5">
+				<li>Tags:</li>
+				{% for tag in include.post-tags %}
+					{% include bojekylls/utils/build-collection-tag-relative-url.html collection=include.post-collection tag=tag %}
+					<li><a href="{{ __return }}">{{ tag }}</a></li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		
+		<hr>
+	</div>
+</header>

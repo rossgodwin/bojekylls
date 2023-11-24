@@ -1,3 +1,17 @@
+@mixin _generateListItemSpacingProperty($prefix, $spacing, $lower-range, $upper-range, $property) {
+	@for $i from $lower-range through $upper-range {
+		$size: $i;
+		
+		.#{$prefix}-#{$size} {
+			li:not(:last-child) {
+				#{$property}: $spacing * $size;
+			}
+		}
+		
+		//@debug #{$prefix}-#{$size}
+	}
+}
+
 .#{$gs-css-prefix}-list-no-style {
 	list-style: none;
 	margin: 0;
@@ -10,20 +24,5 @@
 	}
 }
 
-.#{$gs-css-prefix}-list-item-margin-right-10 {
-	li:not(:last-child) {
-		margin-right: 10px;
-	}
-}
-
-.#{$gs-css-prefix}-list-item-margin-bottom-10 {
-	li:not(:last-child) {
-		margin-bottom: 10px;
-	}
-}
-
-.#{$gs-css-prefix}-list-item-margin-bottom-16 {
-	li:not(:last-child) {
-		margin-bottom: 16px;
-	}
-}
+@include _generateListItemSpacingProperty(#{$gs-css-prefix} + '-list-item-margin-right', 1px, 0, 25, margin-right);
+@include _generateListItemSpacingProperty(#{$gs-css-prefix} + '-list-item-margin-bottom', 1px, 0, 25, margin-bottom);

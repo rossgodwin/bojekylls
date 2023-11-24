@@ -1,0 +1,33 @@
+---
+layout: bojekylls/header-body-footer/page
+---
+
+<section class="gs-bjk-post-page">
+	{% if page.primary-image-relative-url %}
+		<div class="gs-position-relative">
+			<img src="{{ page.primary-image-relative-url | relative_url }}" alt="{{ page.title }}" class="gs-image-responsive">
+			{% include bojekylls/components/image-author-credit-badge.html
+				image-author-name=page.primary-image-author-name
+				image-author-url=page.primary-image-author-url
+			%}
+		</div>
+	{% endif %}
+	
+	<div class="gs-margin-top-20">
+		{% include bojekylls/components/post/post-header.html
+			post-title=page.title
+			post-date=page.date
+			post-tags=page.tags
+			post-collection=page.collection
+		%}
+	</div>
+	
+	<div class="gs-bjk-post-page-body">
+		{% include bojekylls/components/post/post-gallery-thumbnails.html
+			post-galleries=page.galleries
+			post-thumbnail-gallery-width=page.thumbnail-gallery-width
+		%}
+		
+		{{ content }}
+	</div>
+</section>

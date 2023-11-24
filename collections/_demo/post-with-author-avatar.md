@@ -1,11 +1,11 @@
 ---
-layout: bojekylls/header-body-footer/post
+layout: bojekylls/header-body-footer/post/default
 author-alias: jsmith
 title: Post with Author Picture
 include-seo: true
-image-path: assets/images/blog/post-with-author-avatar/banner.png
-image-by-name: Coffee Bean
-image-credit-url: https://pixabay.com/users/coffeebeanworks-558718/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2017978
+primary-image-relative-url: assets/images/blog/post-with-author-avatar/banner.png
+primary-image-author-name: Coffee Bean
+primary-image-author-url: https://pixabay.com/users/coffeebeanworks-558718/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2017978
 categories: [demo]
 tags: [information technology, web design, static website, css, css grid, css flexbox, jekyll, github pages, my website]
 date: 2022-12-18

@@ -1,0 +1,6 @@
+{% assign gallery = include.post-galleries[0] %}
+{% if gallery %}
+	<section class="gs-bjk-panel-gray gs-bjk-post-thumbnails" style="{% if include.post-thumbnail-gallery-width %}width: {{ include.post-thumbnail-gallery-width }};{% endif %}">
+		{% include gs-jekyll-core/components/gallery/thumbnails.html gallery=gallery %}
+	</section>
+{% endif %}
