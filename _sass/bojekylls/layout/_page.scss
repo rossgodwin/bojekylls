@@ -28,7 +28,7 @@
 	grid-template-rows: 1fr;
 }
 
-.#{$bjk-css-prefix}-page-content {
+.#{$bjk-css-prefix}-page-narrow-content {
 	padding-left: $viewport-left-padding;
 	padding-right: $viewport-right-padding;
 	@extend .gs-margin-top-20;
@@ -66,7 +66,7 @@
 }
 
 @media (min-width: $device-width-breakpoint-xlarge) {
-	.#{$bjk-css-prefix}-page-content {
+	.#{$bjk-css-prefix}-page-narrow-content {
 		min-width: 1140px;
 		max-width: 1140px;
 		@include _marginAlignHorizontalCenter;
