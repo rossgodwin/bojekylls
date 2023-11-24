@@ -24,7 +24,7 @@ Here is a example of how to add a block quote.
 {% include bojekylls/components/quote.html quote=_quote quote_by='Kelly Clarkson' %}
 
 
-1) Add 'syntax-highlighter-on: true' in the page frontmatter
+1) Add **<code class="language-text">syntax-highlighter-on: true</code>** in the page frontmatter
 {% capture _code %}---
 syntax-highlighter-on: yes
 ---{% endcapture %}

@@ -32,7 +32,7 @@ table-of-contents:
       - title: Layouts
         url: /docs/layouts/
       - title: Onlylinks Layout
-        url: /docs/onlylinks-layout
+        url: /docs/onlylinks-layout/
   - title: Content
     children:
       - title: Working with Collections

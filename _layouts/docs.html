@@ -7,15 +7,13 @@ include-seo: true
 	{% include bojekylls/components/table-of-contents.html toc=site.data.docs.table-of-contents %}
 {% endcapture %}
 
-<div class="gs-bjk-sticky-sidebar">
-	<div class="gs-bjk-sticky-sidebar_sidebar-wrapper">
-		<nav class="gs-bjk-sticky-sidebar_sidebar">
-			<div class="gs-margin-top-20">
-				{{ _sidebar }}
-			</div>
+<div class="gs-bjk-sidebar">
+	<div class="gs-bjk-sidebar-left-panel">
+		<nav class="gs-margin-top-5">
+			{{ _sidebar }}
 		</nav>
 	</div>
-	<div class="gs-bjk-sticky-sidebar_body">
+	<div class="gs-bjk-sidebar-right-panel">
 		{{ content }}
 	</div>
 </div>
