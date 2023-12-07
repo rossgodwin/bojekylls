@@ -115,7 +115,7 @@
 
 @media (min-width: $device-width-breakpoint-medium) {
 	.#{$bjk-css-prefix}-site-navbar {
-		grid-template-columns: $viewport-left-padding repeat(6, 1fr) $viewport-left-padding;
+		grid-template-columns: $viewport-left-padding repeat(6, 1fr) $viewport-right-padding;
 	}
 	
 	.#{$bjk-css-prefix}-site-navbar-logo {

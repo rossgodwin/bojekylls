@@ -1,5 +1,4 @@
 ---
-layout: docs
 title: Features
 tags: [jekyll, jekyll-theme, docs]
 ---

@@ -1,0 +1,106 @@
+// https://ishadeed.com/article/position-sticky-css-grid/
+// https://www.paigeniedringhaus.com/blog/use-css-grid-to-make-a-fixed-sidebar-with-scrollable-main-body
+
+$medium-device-wiki-sidebar-width: 200px;
+$large-device-wiki-sidebar-width: 300px;
+
+.#{$bjk-css-prefix}-wiki {
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+	grid-template-areas:
+		"t"
+		"s"
+		"c";
+	height: 100vh;
+}
+
+.#{$bjk-css-prefix}-wiki-sidebar-logo {
+	display: none;
+}
+
+.#{$bjk-css-prefix}-wiki-toolbar {
+	grid-area: t;
+	display: grid;
+	grid-template-columns: $viewport-left-padding repeat(2, 1fr) $viewport-right-padding;
+}
+
+.#{$bjk-css-prefix}-wiki-toolbar-title {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	align-self: center;
+}
+
+.#{$bjk-css-prefix}-wiki-toolbar-buttons {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	justify-self: end;
+	align-self: center;
+}
+
+.#{$bjk-css-prefix}-wiki-sidebar {
+	grid-area: s;
+}
+
+.#{$bjk-css-prefix}-wiki-content {
+	grid-area: c;
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.#{$bjk-css-prefix}-wiki {
+		grid-template-columns: $medium-device-wiki-sidebar-width auto;
+		grid-template-rows: 55px calc(100vh - 55px);
+		grid-template-areas:
+			"s t"
+			"s c";
+	}
+	
+	.#{$bjk-css-prefix}-wiki-sidebar {
+		position: sticky;
+		top: 0;
+		align-self: start;
+	}
+	
+	.#{$bjk-css-prefix}-wiki-sidebar-wrapper {
+		overflow-y: auto;
+		overflow-x: hidden;
+		max-height: 100vh;
+	}
+	
+	.#{$bjk-css-prefix}-wiki-sidebar-logo {
+		display: block;
+		img {
+			max-width: calc(#{$medium-device-wiki-sidebar-width} - 50px);
+		}
+	}
+	
+	.#{$bjk-css-prefix}-wiki-toolbar {
+		grid-template-columns: $viewport-left-padding repeat(3, 1fr) $viewport-right-padding;
+	}
+	
+	.#{$bjk-css-prefix}-wiki-toolbar-title {
+		grid-column-start: 3;
+		grid-column-end: 4;
+		justify-self: center;
+	}
+	
+	.#{$bjk-css-prefix}-wiki-toolbar-buttons {
+		grid-column-start: 4;
+		grid-column-end: 5;
+	}
+	
+	.#{$bjk-css-prefix}-wiki-content {
+		overflow: auto;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	.#{$bjk-css-prefix}-wiki {
+		grid-template-columns: $large-device-wiki-sidebar-width auto;
+	}
+	
+	.#{$bjk-css-prefix}-wiki-sidebar-logo {
+		img {
+			max-width: calc(#{$large-device-wiki-sidebar-width} - 100px);
+		}
+	}
+}

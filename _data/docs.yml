@@ -1,8 +1,23 @@
+title: Docs
+
+logo:
+  image-relative-url: assets/images/site/logo.png
+  relative-url: /
+
+buttons:
+  - title: Exit Docs
+    relative-url: /
+    fontawesome-icon-classnames: fas fa-window-close
+
 table-of-contents:
   - title: Getting Started
     children:
       - title: Quick-Start Guide
         url: /docs/quick-start-guide/
+      - title: Install Jekyll on Windows using WSL
+        url: /docs/install-jekyll-on-windows-using-wsl/
+      - title: Install the Theme
+        url: /docs/install-the-theme/
       - title: Structure
         url: /docs/structure/
       - title: Installation

@@ -59,7 +59,6 @@ gems:
   - jekyll-liquify
 
 plugins:
-  - jekyll-gist
   - jekyll-paginate-v2
   - jekyll-sitemap
 
@@ -87,6 +86,7 @@ defaults:
   - scope:
       type: docs
     values:
+      layout: docs-wiki
       syntax-highlighter-on: true
       categories: [docs]
   - scope:

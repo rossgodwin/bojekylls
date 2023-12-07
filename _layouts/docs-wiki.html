@@ -1,0 +1,23 @@
+---
+layout: bojekylls/default
+---
+
+{% capture _sidebar %}
+	{% include bojekylls/components/table-of-contents.html toc=site.data.docs.table-of-contents %}
+{% endcapture %}
+
+<div class="gs-bjk-wiki">
+	{% include bojekylls/layout/wiki/toolbar.html
+		title=site.data.docs.title
+		buttons=site.data.docs.buttons %}
+	
+	{% include bojekylls/layout/wiki/sidebar.html
+		logo-relative-url=site.data.docs.logo.relative-url
+		logo-image-relative-url=site.data.docs.logo.image-relative-url
+		logo-alterntive=site.data.docs.title
+		sidebar-content=_sidebar %}
+	
+	<section class="gs-bjk-wiki-content gs-padding-10">
+		{{ content }}
+	</section>
+</div>

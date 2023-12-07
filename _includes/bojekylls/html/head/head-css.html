@@ -43,3 +43,14 @@
 {% for css in print-css-relative-urls %}
 	<link rel="stylesheet" type="text/css" href="{{ css | relative_url }}" media="print">
 {% endfor %}
+
+{% if page.syntax-highlighter-on %}
+	<style>
+		pre[class*="language-" ],
+		code[class*="language-"] {
+			white-space: normal;
+			overflow: auto;
+			word-break: break-word;
+		}
+	</style>
+{% endif %}
