@@ -1,50 +1,54 @@
 <div class="gs-bjk-site-footer">
-	<div class="gs-bjk-site-footer-icon-links">
-		<ul>
-			{% if site.data.bojekylls.site-footer.email-address %}
-				<li>
-					<a href="emailto:{{ site.data.bojekylls.site-footer.email-address }}" class="gs-link-no-underline" target="_blank">
-						{% include gs-jekyll-core/components/icons/fa/email-circle-icon.html fa-x=2 %}
-					</a>
-				</li>
-			{% endif %}
-			{% if site.data.bojekylls.social.linkedin %}
-				<li>
-					<a href="{{ site.data.bojekylls.social.linkedin.url }}" class="gs-link-no-underline" target="_blank">
-						{% include gs-jekyll-core/components/icons/fa/linkedin-circle-icon.html fa-x=2 %}
-					</a>
-				</li>
-			{% endif %}
-			{% if site.data.bojekylls.social.twitter %}
-				<li>
-					<a href="{{ site.data.bojekylls.social.twitter.url }}" class="gs-link-no-underline" target="_blank">
-						{% include gs-jekyll-core/components/icons/fa/twitter-circle-icon.html fa-x=2 %}
-					</a>
-				</li>
-			{% endif %}
-			{% if site.data.bojekylls.social.instagram %}
-				<li>
-					<a href="{{ site.data.bojekylls.social.instagram.url }}" class="gs-link-no-underline" target="_blank">
-						{% include gs-jekyll-core/components/icons/fa/instagram-circle-icon.html fa-x=2 %}
-					</a>
-				</li>
-			{% endif %}
-			{% if site.data.bojekylls.social.facebook %}
-				<li>
-					<a href="{{ site.data.bojekylls.social.facebook.url }}" class="gs-link-no-underline" target="_blank">
-						{% include gs-jekyll-core/components/icons/fa/facebook-circle-icon.html fa-x=2 %}
-					</a>
-				</li>
-			{% endif %}
-			{% if site.data.bojekylls.social.github %}
-				<li>
-					<a href="{{ site.data.bojekylls.social.github.url }}" class="gs-link-no-underline" target="_blank">
-						{% include gs-jekyll-core/components/icons/fa/github-circle-icon.html fa-x=2 %}
-					</a>
-				</li>
-			{% endif %}
-		</ul>
-	</div>
+	{% if site.data.bojekylls.site-footer.include-social-icons %}
+		<div class="gs-bjk-site-footer-icon-links">
+			<ul>
+				{% for social in site.data.bojekylls.site-footer.social-links %}
+					{% if social.email %}
+						<li>
+							<a href="emailto:{{ site.data.bojekylls.site-footer.email-address }}" class="gs-link-no-underline" target="_blank">
+								{% include gs-jekyll-core/components/icons/fa/email-circle-icon.html fa-x=2 %}
+							</a>
+						</li>
+					{% endif %}
+					{% if social.linkedin %}
+						<li>
+							<a href="{{ site.data.bojekylls.social.linkedin.url }}" class="gs-link-no-underline" target="_blank">
+								{% include gs-jekyll-core/components/icons/fa/linkedin-circle-icon.html fa-x=2 %}
+							</a>
+						</li>
+					{% endif %}
+					{% if social.x %}
+						<li>
+							<a href="{{ site.data.bojekylls.social.x.url }}" class="gs-link-no-underline" target="_blank">
+								{% include gs-jekyll-core/components/icons/fa/twitter-circle-icon.html fa-x=2 %}
+							</a>
+						</li>
+					{% endif %}
+					{% if social.instagram %}
+						<li>
+							<a href="{{ site.data.bojekylls.social.instagram.url }}" class="gs-link-no-underline" target="_blank">
+								{% include gs-jekyll-core/components/icons/fa/instagram-circle-icon.html fa-x=2 %}
+							</a>
+						</li>
+					{% endif %}
+					{% if social.facebook %}
+						<li>
+							<a href="{{ site.data.bojekylls.social.facebook.url }}" class="gs-link-no-underline" target="_blank">
+								{% include gs-jekyll-core/components/icons/fa/facebook-circle-icon.html fa-x=2 %}
+							</a>
+						</li>
+					{% endif %}
+					{% if social.github %}
+						<li>
+							<a href="{{ site.data.bojekylls.social.github.url }}" class="gs-link-no-underline" target="_blank">
+								{% include gs-jekyll-core/components/icons/fa/github-circle-icon.html fa-x=2 %}
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	{% endif %}
 	
 	{% if site.data.bojekylls.site-footer.text-links %}
 		<div class="gs-bjk-site-footer-text-links">

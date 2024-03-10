@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   
   spec.files = Dir['_includes/**/*', 'README.md']
   
-  spec.add_runtime_dependency "jekyll", "~> 4.0"
+  spec.add_runtime_dependency "jekyll", "~> 4.3.1"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
   spec.add_runtime_dependency "jekyll-paginate-v2", "~> 3.0"
   

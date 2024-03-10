@@ -1,5 +1,13 @@
 include-social-icons: yes
 
+social-links:
+  - email: yes
+  - linkedin: yes
+  - x: yes
+  - instagram: yes
+  - facebook: yes
+  - github: yes
+
 text-links:
   - text: About
     relative-url: about
