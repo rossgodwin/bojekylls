@@ -1,6 +1,5 @@
 ---
 title: Features
-tags: [jekyll, jekyll-theme, docs]
 ---
 
 ## {{ page.title }}
@@ -12,3 +11,4 @@ tags: [jekyll, jekyll-theme, docs]
 - Open Graph Protocol support
 - Support for SaSS
 - Photo gallery rendering
+- Prismjs for syntax highlighting

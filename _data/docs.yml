@@ -10,32 +10,28 @@ buttons:
     fontawesome-icon-classnames: fas fa-window-close
 
 table-of-contents:
-  - title: Getting Started
+  - title: Quick-Start
     children:
-      - title: Quick-Start Guide
-        url: /docs/quick-start-guide/
       - title: Install Jekyll on Windows using WSL
-        url: /docs/install-jekyll-on-windows-using-wsl/
+        url: /docs/quick-start-install-jekyll-on-windows-using-wsl/
       - title: Install the Theme
-        url: /docs/install-the-theme/
-      - title: Structure
-        url: /docs/structure/
-      - title: Installation
-        url: /docs/installation/
-      - title: Upgrading
-        url: /docs/upgrading/
-  - title: About
+        url: /docs/quick-start-install-the-theme/
+      - title: Building, Testing and Publishing
+        url: /docs/quick-start-building-testing-and-publishing/
+  - title: About the Theme
     children:
       - title: Overview
-        url: /docs/about/
+        url: /docs/about-overview/
       - title: Features
-        url: /docs/features/
+        url: /docs/about-features/
       - title: Screen Breakpoints
-        url: /docs/screen-breakpoints/
-  - title: Customization
+        url: /docs/about-screen-breakpoints/
+      - title: Structure
+        url: /docs/structure/
+  - title: Customize
     children:
       - title: Set Your Website Favicon
-        url: /docs/set-your-website-favicon/
+        url: /docs/customize-change-the-website-favicon/
       - title: Overriding Theme Defaults
         url: /docs/overriding-theme-defaults/
       - title: Navigation

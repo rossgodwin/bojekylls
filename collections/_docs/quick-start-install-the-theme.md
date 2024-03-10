@@ -2,9 +2,9 @@
 title: Install the Theme
 ---
 
-## Install via Gem
+## {{ page.title }}
 
-### Obtain the GemFile
+##### Obtain the GemFile
 
 Currently the GemFile is not on rubygems.org, so the GemFile will need to be downloaded.
 
@@ -18,7 +18,7 @@ Fork the ```Bojekylls``` repository and build the GemFile using the GemSpec.
 gem build jekyll-theme-bojekylls
 ```
 
-### Install the GemFile
+##### Install the GemFile
 
 Once the GemFile has been obtained and in a local folder...
 

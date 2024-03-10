@@ -1,25 +1,27 @@
 ---
 title: Install Jekyll on Windows Using WSL
-date: 2023-11-25
+description: Instructions for installing Jekyll on a Windows computer
+tags: [jekyll, windows, wsl]
+include-seo: true
 ---
 
-I was not interested in installing Jekyll and dependency software directly on my Windows operating system: 1) because I like to keep my environment as free as possible from development software as possible, 2) it frees me up from going in to modify my Windows path environment variable, 3) the Linux deb packages make things go much more smoothly.
+## {{ page.title }}
 
-Jekyllrb does have installation instructions on how to install and run [Jekyll via Windows Subsystem for Linux(wsl)](https://jekyllrb.com/docs/installation/windows){:target="_blank"} but I like to record the steps that I took in case I ever have to recreate my environment.  And often times I find there is an important tweek here or there that I have to make.
+The following adds a little more color to Jekyllrb.com's [instructions](https://jekyllrb.com/docs/installation/windows){:target="_blank"} for installing and running on Jekyll on Windows.
 
-### Install WSL
+##### Install WSL (Windows Subsystem for Linux)
 
 Open ***Windows Features*** and enable **Windows Subsystem for Linux**.  ***Windows Features*** can be found using the Windows search tool.  
 
 ![Windows Features]({% link assets/images/docs/install-jekyll-on-windows-using-wsl/windows-features.png %}){:class="gs-image-responsive" style="max-width: 559px;"}
 
-### Install the Debian app
+##### Install the Debian app
 
 Open ***Microsoft Store***, search for ***Debian*** and install the app.
 
 ![Debian Microsoft Store]({% link assets/images/docs/install-jekyll-on-windows-using-wsl/debian-microsoft-store.jpg %}){:class="gs-image-responsive" style="max-width: 841px;"}
 
-### Configure Debian
+##### Configure Debian
 
 Update the local repository index in order to install the latest software versions from the repositories.
 
@@ -28,7 +30,7 @@ $ sudo apt-get update
 $ sudo apt-get dist-upgrade
 ```
 
-### Install Ruby
+##### Install Ruby
 
 Jekyll is a Ruby Gem.
 
@@ -44,7 +46,7 @@ $ gem -v
 $ gem env
 ```
 
-### Install Gem
+##### Install Gem
 
 Don't install gems as the root user.  Rather setup a gems folder in your user account home.  Make sure you are in the user's home directory and run the following.
 
@@ -57,7 +59,7 @@ $ source .bashrc
 $ nano .bashrc
 ```
 
-### Install Bundler
+##### Install Bundler
 
 The next step that jekyllrb.com has is to install both Jekyll and [Bundler](https://bundler.io){:target="_blank"}.  I'm going to deviate from that and just install bundler and opt to use Bundler to add Jekyll as a dependency in any jekyll projects that I create.
 
@@ -65,7 +67,7 @@ The next step that jekyllrb.com has is to install both Jekyll and [Bundler](http
 $ gem install bundler
 ```
 
-### Configure Jekyll
+##### Configure Jekyll
 
 At this this point, I found that I had to restart my computer to get the remaining steps to work.
 

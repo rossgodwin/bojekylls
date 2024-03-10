@@ -6,6 +6,7 @@ include-seo: true
 categories: [demo]
 tags: [information technology, web design, static website, css, css grid, css flexbox, jekyll, github pages, my website]
 date: 2022-12-18
+masonry-grids: true
 ---
 
 This website is a static site that I created using HTML, CSS, Jekyll, Javascript and other 3rd party libraries.

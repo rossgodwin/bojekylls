@@ -1,3 +1,9 @@
+.#{$bjk-css-prefix}-heading-color {
+	@include themify() {
+		color: v(heading-color);
+	}
+}
+
 .#{$bjk-css-prefix}-heading {
 	letter-spacing: 0.15rem;
 	text-transform: uppercase;

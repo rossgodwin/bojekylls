@@ -43,6 +43,14 @@ $large-device-wiki-sidebar-width: 300px;
 
 .#{$bjk-css-prefix}-wiki-content {
 	grid-area: c;
+	
+	> h2, > h3, > h4, > h5, > h6 {
+		@extend .#{$bjk-css-prefix}-heading-color;
+	}
+	
+	> h2 {
+		margin-bottom: 20px;
+	}
 }
 
 @media (min-width: $device-width-breakpoint-medium) {

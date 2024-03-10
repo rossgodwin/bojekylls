@@ -4,6 +4,10 @@
 	}
 }
 
+.#{$gs-css-prefix}-link-text-white {
+	@include _styleLinkApplySameColorToAllStates($color-white);
+}
+
 .#{$gs-css-prefix}-link-no-underline {
 	text-decoration: none;
 	&:hover {
