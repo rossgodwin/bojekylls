@@ -16,7 +16,7 @@ echo README.md >> %_exclude_filename%
 echo %_exclude_filename% >> %_exclude_filename%
 echo %~nx0 >> %_exclude_filename%
 
-Set "_destination_folder=D:\Test\Destination"
+Set "_destination_folder=D:\Temp\bojekylls"
 
 xcopy . %_destination_folder% /r /i /e /y /exclude:%_exclude_filename%
 xcopy .\_sass %_destination_folder%\_sass /r /i /e /y
