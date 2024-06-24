@@ -2,7 +2,7 @@
 layout: bojekylls/header-body-footer/page
 ---
 
-<section class="gs-bjk-post-page">
+<section class="gs-bjk-post">
 	{% if page.primary-image-relative-url %}
 		<div class="gs-position-relative">
 			<img src="{{ page.primary-image-relative-url | relative_url }}" alt="{{ page.title }}" class="gs-image-responsive">
@@ -22,8 +22,8 @@ layout: bojekylls/header-body-footer/page
 		%}
 	</div>
 	
-	<div class="gs-bjk-post-page-body">
-		{% include bojekylls/components/post/post-gallery-thumbnails.html
+	<div class="gs-bjk-post-body">
+		{% include bojekylls/components/post/post-thumbnails.html
 			post-galleries=page.galleries
 			post-thumbnail-gallery-width=page.thumbnail-gallery-width
 		%}

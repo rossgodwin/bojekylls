@@ -1,11 +1,11 @@
-<div class="gs-bjk-onlylinks-page">
-	<div class="gs-bjk-onlylinks-page-header">
+<div class="gs-bjk-onlylinks_page">
+	<div class="gs-bjk-onlylinks_page-header">
 		<a href="{{ include.logo-relative-url | relative_url }}">
 			<img src="{{ include.logo-image-relative-url | relative_url }}" alt="{{ include.title }}">
 		</a>
 		<span class="gs-text-b16-m2 gs-bjk-text-color-scaled-down-size">{{ include.subtitle }}</span>
 	</div>
-	<div class="gs-bjk-onlylinks-page-body gs-margin-align-horizontal-center">
+	<div class="gs-bjk-onlylinks_page-body gs-margin-align-horizontal-center">
 		<div class="gs-bjk-onlylinks-buttons">
 			{% for link in include.links %}
 				{% assign _url = link.external-url %}

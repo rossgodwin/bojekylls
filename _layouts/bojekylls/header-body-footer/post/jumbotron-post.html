@@ -9,7 +9,7 @@ layout: bojekylls/header-body-footer/default
 		background-image-author-url=page.primary-image-author-url %}
 {% endif %}
 
-<section class="gs-bjk-page-narrow-content gs-bjk-post-page">
+<section class="gs-bjk-post gs-bjk-page-narrow_content">
 	{% include bojekylls/components/post/post-header.html
 		post-title=page.title
 		post-date=page.date
@@ -17,8 +17,8 @@ layout: bojekylls/header-body-footer/default
 		post-collection=page.collection
 	%}
 	
-	<div class="gs-bjk-post-page-body">
-		{% include bojekylls/components/post/post-gallery-thumbnails.html
+	<div class="gs-bjk-post-body">
+		{% include bojekylls/components/post/post-thumbnails.html
 			post-galleries=page.galleries
 			post-thumbnail-gallery-width=page.thumbnail-gallery-width
 		%}

@@ -1,0 +1,16 @@
+.#{$bjk-css-prefix}-page-narrow_content {
+	padding-left: $viewport-left-padding;
+	padding-right: $viewport-right-padding;
+	@extend .gs-margin-top-20;
+	@extend .gs-margin-bottom-20;
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	.#{$bjk-css-prefix}-page-narrow_content {
+		min-width: 1140px;
+		max-width: 1140px;
+		@include _marginAlignHorizontalCenter;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

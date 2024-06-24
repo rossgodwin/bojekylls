@@ -1,6 +1,6 @@
-$padding: 20px;
+$post-grid-item-padding: 20px;
 
-.#{$bjk-css-prefix}-page-posts-grid-item {
+.#{$bjk-css-prefix}-post-grid-item {
 	display: flex;
 	flex-direction: column;
 	
@@ -23,16 +23,8 @@ $padding: 20px;
 	margin-bottom: 20px;
 }
 
-.#{$bjk-css-prefix}-page-posts-article-author-avatar {
-	img {
-		width: 78px;
-		height: 78px;
-		border-radius: 50%;
-	}
-}
-
-.#{$bjk-css-prefix}-page-posts-article-body {
-	padding: calc(#{$padding} / 2) $padding $padding;
+.#{$bjk-css-prefix}-post-grid-item-body {
+	padding: calc(#{$post-grid-item-padding} / 2) $post-grid-item-padding $post-grid-item-padding;
 	
 	.date {
 		margin-bottom: 10px;
@@ -43,7 +35,19 @@ $padding: 20px;
 	}
 }
 
-.#{$bjk-css-prefix}-page-posts-article-top-delimiter {
+.#{$bjk-css-prefix}-post-grid-item-footer {
+	padding: $post-grid-item-padding;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	column-gap: $post-grid-item-padding;
+	
+	span {
+		font-size: 0.9rem;
+	}
+}
+
+.#{$bjk-css-prefix}-post-grid-item-footer-top_delimiter {
 	position: relative;
 	
 	&:before {
@@ -59,14 +63,10 @@ $padding: 20px;
 	}
 }
 
-.#{$bjk-css-prefix}-page-posts-article-footer {
-	padding: $padding;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	column-gap: $padding;
-	
-	span {
-		font-size: 0.9rem;
+.#{$bjk-css-prefix}-post-grid-item-footer-author_avatar {
+	img {
+		width: 78px;
+		height: 78px;
+		border-radius: 50%;
 	}
 }

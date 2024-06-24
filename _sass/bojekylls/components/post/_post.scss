@@ -1,8 +1,8 @@
-.#{$bjk-css-prefix}-post-page {
+.#{$bjk-css-prefix}-post {
 	margin-top: 1rem;
 }
 
-.#{$bjk-css-prefix}-post-page-body {
+.#{$bjk-css-prefix}-post-body {
 	.jkt-blockquote {
 		margin-bottom: 0.5rem;
 	}
@@ -34,21 +34,18 @@
 	h5 {
 		font-size: 1.1rem;
 	}
-}
-
-.#{$bjk-css-prefix}-post-thumbnails {
-	margin-right: 25px;
-	margin-bottom: 25px;
-	padding: 10px;
-}
-
-@media (min-width: $device-width-breakpoint-large) {
-	.#{$bjk-css-prefix}-post-page-body {
-		float: none;
-	}
 	
-	.#{$bjk-css-prefix}-post-thumbnails {
-		float: left;
-		width: 450px;
+	.#{$bjk-css-prefix}-post-thumbnails-panel {
+		@include _marginAlignHorizontalCenter;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.#{$bjk-css-prefix}-post-body {
+		.#{$bjk-css-prefix}-post-thumbnails-panel {
+			float: left;
+			margin-right: 25px;
+			margin-bottom: 25px;
+		}
 	}
 }

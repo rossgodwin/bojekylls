@@ -1,4 +1,4 @@
-.#{$bjk-css-prefix}-page {
+.#{$bjk-css-prefix}-hbf_page {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	grid-template-columns: minmax(0, 1fr); // prevent grid blowout i.e. when embedding a gist in the grid
@@ -12,7 +12,7 @@
 	height: 100vh;
 }
 
-.#{$bjk-css-prefix}-page-header {
+.#{$bjk-css-prefix}-hbf_page-header {
 	grid-area: h;
 	@include themify() {
 		background-color: v(page-header-background-color);
@@ -22,20 +22,13 @@
 	border-bottom-width: 1px;
 }
 
-.#{$bjk-css-prefix}-page-body {
+.#{$bjk-css-prefix}-hbf_page-body {
 	grid-area: b;
 	display: grid;
 	grid-template-rows: 1fr;
 }
 
-.#{$bjk-css-prefix}-page-narrow-content {
-	padding-left: $viewport-left-padding;
-	padding-right: $viewport-right-padding;
-	@extend .gs-margin-top-20;
-	@extend .gs-margin-bottom-20;
-}
-
-.#{$bjk-css-prefix}-page-footer {
+.#{$bjk-css-prefix}-hbf_page-footer {
 	grid-area: f;
 	@include themify() {
 		background-color: v(page-footer-background-color);
@@ -51,26 +44,19 @@
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.#{$bjk-css-prefix}-page {
+	.#{$bjk-css-prefix}-hbf_page {
 		grid-template-rows: $medium-device-page-header-height 1fr auto;
 	}
 	
-	.#{$bjk-css-prefix}-page-header {
+	.#{$bjk-css-prefix}-hbf_page-header {
+		z-index: 1;
+	}
+	
+	.#{$bjk-css-prefix}-hbf_page-header-fixed {
 		height: $medium-device-page-header-height;
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 1;
-	}
-}
-
-@media (min-width: $device-width-breakpoint-xlarge) {
-	.#{$bjk-css-prefix}-page-narrow-content {
-		min-width: 1140px;
-		max-width: 1140px;
-		@include _marginAlignHorizontalCenter;
-		padding-left: 0;
-		padding-right: 0;
 	}
 }

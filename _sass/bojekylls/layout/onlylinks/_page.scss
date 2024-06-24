@@ -1,4 +1,4 @@
-.#{$bjk-css-prefix}-onlylinks-page {
+.#{$bjk-css-prefix}-onlylinks_page {
 	padding-left: $viewport-left-padding;
 	padding-right: $viewport-right-padding;
 	
@@ -10,7 +10,7 @@
 		"b";
 }
 
-.#{$bjk-css-prefix}-onlylinks-page-header {
+.#{$bjk-css-prefix}-onlylinks_page-header {
 	min-height: 200px;
 	grid-area: h;
 	display: flex;
@@ -25,7 +25,7 @@
 	}
 }
 
-.#{$bjk-css-prefix}-onlylinks-page-body {
+.#{$bjk-css-prefix}-onlylinks_page-body {
 	grid-area: b;
 	width: 100%;
 }
@@ -58,14 +58,14 @@
 }
 
 @media (min-width: $device-width-breakpoint-medium) {
-	.#{$bjk-css-prefix}-onlylinks-page-body {
+	.#{$bjk-css-prefix}-onlylinks_page-body {
 		min-width: 648px;
 		max-width: 648px;
 	}
 }
 
 @media (min-width: $device-width-breakpoint-xlarge) {
-	.#{$bjk-css-prefix}-onlylinks-page {
+	.#{$bjk-css-prefix}-onlylinks_page {
 		padding-left: 0;
 		padding-right: 0;
 	}

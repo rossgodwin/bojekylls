@@ -14,22 +14,22 @@
 	{% assign post-description = post.excerpt %}
 {% endif %}
 
-<div class="gs-mgrid-3c-item gs-bjk-page-posts-grid-item gs-background-color-white">
+<div class="gs-mgrid-3c-item gs-bjk-post-grid-item gs-background-color-white">
 	<div class="gs-position-relative gs-margin-align-horizontal-right gs-text-align-horizontal-right">
 		{% if post.primary-image-relative-url %}
 			<img src="{{ post.primary-image-relative-url | relative_url }}" alt="{{ post.title }}">
 		{% endif %}
 		<div class="gs-margin-top-10 gs-margin-right-10 gs-bjk-badge gs-bjk-badge-color-blue-midnight{% if post.primary-image-relative-url %} gs-position-top-right{% endif%} gs-text-uppercase">{{ category }}</div>
 	</div>
-	<div class="gs-bjk-page-posts-article-body">
+	<div class="gs-bjk-post-grid-item-body">
 		<h5><a href="{{ post-url }}">{{ post.title }}</a></h5>
 		<p>
 			{{ post-description | strip_html }}
 		</p>
 	</div>
-	<div class="gs-bjk-page-posts-article-footer gs-bjk-page-posts-article-top-delimiter">
+	<div class="gs-bjk-post-grid-item-footer gs-bjk-post-grid-item-footer-top_delimiter">
 		{% if author.avatar-relative-url %}
-			<div class="gs-bjk-page-posts-article-author-avatar">
+			<div class="gs-bjk-post-grid-item-footer-author_avatar">
 				<img src="{{ author.avatar-relative-url | relative_url }}" alt="{{ post.title }}">
 			</div>
 		{% endif %}

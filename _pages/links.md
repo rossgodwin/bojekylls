@@ -20,7 +20,7 @@ links:
     fontawesome-icon-classnames: fab fa-github fa-2x
 ---
 
-{% include bojekylls/pages/onlylinks.html
+{% include bojekylls/layout/onlylinks/page.html
 	logo-relative-url=page.logo-relative-url
 	logo-image-relative-url=page.logo-image-relative-url
 	title=page.title

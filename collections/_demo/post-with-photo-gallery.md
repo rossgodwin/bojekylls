@@ -9,7 +9,7 @@ primary-image-author-url: https://pixabay.com/users/amandasowers-1974449/?utm_so
 categories: [demo]
 tags: [jekyll, demo, photo gallery]
 date: 2023-03-04
-thumbnail-gallery-width: 450px
+thumbnail-gallery-width: 425px
 galleries:
   - id: thumbnail-demo1
     type: thumbnails
@@ -62,6 +62,6 @@ To do this you will need to add the photo and corresponding thumbnail urls under
 <a class="gs-bjk-button gs-bjk-button-solid-blue" href="#" id="dynamic-demo">Launch Gallery</a>
 
 {% assign gallery = page.galleries[2] %}
-<section class="gs-bjk-panel-gray gs-bjk-post-thumbnails" style="width: 450px">
+<section class="gs-bjk-panel-gray gs-bjk-post-thumbnails-panel" style="width: 425px">
 	{% include gs-jekyll-core/components/gallery/thumbnails.html gallery=gallery %}
 </section>

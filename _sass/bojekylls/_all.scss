@@ -18,15 +18,16 @@
 @import "components/lists";
 @import "components/paginator";
 @import "components/panel";
-@import "components/site-footer";
-@import "components/site-navbar";
 @import "components/text";
+@import "components/page/layout";
+@import "components/post/post-grid-item";
+@import "components/post/post-thumbnails";
+@import "components/post/post";
 
-@import "layout/page";
-@import "layout/wiki";
-
-@import "pages/onlylinks";
-@import "pages/post";
-@import "pages/posts";
+@import "layout/header-body-footer/site-footer";
+@import "layout/header-body-footer/site-navbar";
+@import "layout/header-body-footer/page";
+@import "layout/onlylinks/page";
+@import "layout/wiki/page";
 
 @import "utilities/page-loading-overlay";

@@ -6,7 +6,7 @@ layout: bojekylls/default
 	{% include bojekylls/components/table-of-contents.html toc=site.data.docs.table-of-contents %}
 {% endcapture %}
 
-<div class="gs-bjk-wiki">
+<div class="gs-bjk-wiki_page">
 	{% include bojekylls/layout/wiki/toolbar.html
 		title=site.data.docs.title
 		buttons=site.data.docs.buttons %}
@@ -17,7 +17,7 @@ layout: bojekylls/default
 		logo-alterntive=site.data.docs.title
 		sidebar-content=_sidebar %}
 	
-	<section class="gs-bjk-wiki-content gs-padding-10">
+	<section class="gs-bjk-wiki_page-content gs-padding-10">
 		{{ content }}
 	</section>
 </div>

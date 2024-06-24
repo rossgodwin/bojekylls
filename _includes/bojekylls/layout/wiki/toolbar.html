@@ -1,9 +1,9 @@
-<section class="gs-bjk-wiki-toolbar">
-	<div class="gs-bjk-wiki-toolbar-title">
+<section class="gs-bjk-wiki_page-toolbar">
+	<div class="gs-bjk-wiki_page-toolbar-title">
 		<h2 class="gs-bjk-heading">{{ include.title }}</h2>
 	</div>
 	{% if include.buttons %}
-		<ul class="gs-bjk-wiki-toolbar-buttons gs-list-no-style gs-list-inline">
+		<ul class="gs-bjk-wiki_page-toolbar-buttons gs-list-no-style gs-list-inline">
 			{% for button in include.buttons %}
 				<li>
 					<a class="gs-bjk-button gs-bjk-button-outline-blue" href="{{ button.relative-url | relative_url }}">{% if button.fontawesome-icon-classnames %}<i class="gs-button-left-icon {{ button.fontawesome-icon-classnames }}"></i>{% endif %}{{ button.title }}</a>
