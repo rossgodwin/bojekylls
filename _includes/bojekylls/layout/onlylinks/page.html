@@ -8,11 +8,8 @@
 	<div class="gs-bjk-onlylinks_page-body gs-margin-align-horizontal-center">
 		<div class="gs-bjk-onlylinks-buttons">
 			{% for link in include.links %}
-				{% assign _url = link.external-url %}
-				{% if link.internal-relative-url %}
-					{% assign = _url = link.internal-relative-url | relative_url %}
-				{% endif %}
-				<a class="gs-bjk-onlylinks-button gs-bjk-button gs-bjk-button-solid-blue" href="{{ _url }}" role="button"{% if link.external-url %} target="_blank"{% endif %}>
+				{% include gs-jekyll-core/utils/get-url.html url=link.url %}
+				<a class="gs-bjk-onlylinks-button gs-bjk-button gs-bjk-button-solid-blue" href="{{ __return }}" role="button"{% if link.open-new-tab %} target="_blank"{% endif %}>
 					<i class="{{ link.fontawesome-icon-classnames }} fa-align-left"></i><span>{{ link.title }}</span>
 				</a>
 			{% endfor %}

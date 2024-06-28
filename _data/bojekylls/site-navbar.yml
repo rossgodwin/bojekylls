@@ -1,26 +1,35 @@
 title: Bojekylls
 
 logo:
-  image-relative-url: assets/images/site/logo.png
-  relative-url: /
+  image-internal-relative-url: assets/images/site/logo.png
+  internal-relative-url: /
 
 menu:
   - title: More
-    relative-url: #
+    url:
+      internal-relative-url: #
     menu:
       - title: Docs
-        relative-url: docs
-        icon-relative-url: assets/images/site/navbar/construction.png
+        url:
+          internal-relative-url: docs
+        icon-url:
+          internal-relative-url: assets/images/site/navbar/construction.png
         description: Documentation that will help you use and customize this theme.
       - title: Demo
-        relative-url: demo
-        icon-relative-url: assets/images/site/navbar/information-technology.png
+        url:
+          internal-relative-url: demo
+        icon-url:
+          internal-relative-url: assets/images/site/navbar/information-technology.png
         description: View demonstrations of this features in this theme.
       - title: Onlylinks
-        relative-url: links
-        icon-relative-url: assets/images/site/navbar/information-technology.png
+        url:
+          internal-relative-url: links
+        icon-url:
+          internal-relative-url: assets/images/site/navbar/information-technology.png
         description: Feature that lets you create a links only page i.e. linktree.
   - title: About
-    relative-url: docs/about
+    url:
+      internal-relative-url: docs/about
   - title: Quick-Start-Guide
-    relative-url: docs/quick-start-guide
+    url:
+      internal-relative-url: docs/quick-start-guide

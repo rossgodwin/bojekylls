@@ -1,0 +1,10 @@
+<!--
+	url
+		internal-relative-url	(optional)
+		external-url			(optional)
+-->
+{% if include.url.internal-relative-url %}
+	{% assign __return = include.url.internal-relative-url | relative_url %}
+{% else if include.url.external-url %}
+	{% assign __return = include.url.external-url %}
+{% endif %}
