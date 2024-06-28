@@ -1,0 +1,56 @@
+name: Andree Rocher
+location: Philadelphia, PA
+phone-number: 705-555-0121
+title: Professional Title
+linkedin:
+  display-url: linkedin.com/in/ross-godwin
+  url: https://www.linkedin.com/in/ross-godwin
+
+intro-heading-text: Summary
+intro:
+  To obtain a challenging data scientist position in a dynamic and innovative organization where I can use my technical and analytical skills.
+
+work-history-heading-text: Professional History
+work-history-companies:
+  - company-name: FlueroGen
+    positions:
+      - title: Data Scientist
+        duration-date-to-date: 2021 to Present
+        cv:
+          responsibilities:
+            - Increased customer retention by 20%
+            - Reduced fraudulent charges by 50% 
+            - Improved product recommendations and increased sales
+            - Drove business decisions and reduced operational costs
+  - company-name: Pantheros Labs
+    positions:
+      - title: Junior Data Scientist
+        duration-date-to-date: 2008 to 2019
+        cv:
+          responsibilities:
+            - Cleaned and preprocessed data
+            - Conducted statistical tests for decision support
+            - Developed machine learning models for prediction
+            - Collaborated on A/B tests, increased click-through
+
+skills-heading-text: Skills & Abilities
+skills:
+    - Management
+    - Problem solving
+    - Communication
+    - Leadership
+
+education-heading-text: Educational History
+education-degrees:
+  - school: Bellows College
+    years: 1999-2003
+    major: BS Mathematics
+    latin-honor: Magna cum laude
+  - school: Jasper University
+    years: 2003-2005
+    major: MS Data Science
+
+download-versions:
+  pdf:
+    display-text: PDF Version
+    file-relative-url: assets/docs/classic-resume.pdf

@@ -1,0 +1,6 @@
+{% if include.pdf %}
+	<a class="gs-bjk-button gs-bjk-button-solid-blue" href="{{ include.pdf.file-relative-url | relative_url }}" role="button" target="_blank"><i class="gs-button-left-icon fa fa-file-pdf fa-w-12"></i>{{ include.pdf.display-text }}</a>
+{% endif %}
+{% if include.text %}
+	<a class="gs-bjk-button gs-bjk-button-solid-blue" href="{{ include.text.file-relative-url | relative_url }}" role="button" target="_blank"><i class="gs-button-left-icon fa fa-file-alt fa-w-12"></i>{{ include.text.display-text }}</a>
+{% endif %}

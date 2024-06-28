@@ -17,3 +17,5 @@
 @include _generateSpacingProperty(#{$gs-css-prefix} + '-margin-bottom', 1px, 0, 100, margin-bottom);
 
 @include _generateSpacingProperty(#{$gs-css-prefix} + '-padding', 1px, 0, 20, padding);
+
+@include _generateSpacingProperty(#{$gs-css-prefix} + '-padding-bottom', 1px, 0, 50, padding-bottom);
