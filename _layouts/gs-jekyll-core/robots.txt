@@ -2,8 +2,6 @@
 permalink: robots.txt
 ---
 
-Sitemap: {{ 'sitemap.xml' | absolute_url }}
-
 User-agent: *
 Disallow: /
 
@@ -22,4 +20,4 @@ User-agent: facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext
 User-agent: facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)
 User-agent: ia_archiver
 Disallow: {{ 'assets/' | relative_url }}
-{{ content }}
+{{ content | strip_html}}
