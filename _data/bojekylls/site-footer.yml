@@ -1,4 +1,5 @@
 include-social-icons: yes
+include-text-links: yes
 
 social-links:
   - email: yes

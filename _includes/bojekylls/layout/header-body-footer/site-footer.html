@@ -50,7 +50,7 @@
 		</div>
 	{% endif %}
 	
-	{% if site.data.bojekylls.site-footer.text-links %}
+	{% if site.data.bojekylls.site-footer.include-text-links %}
 		<div class="gs-bjk-site-footer-text-links">
 			<ul>
 				{% for link in site.data.bojekylls.site-footer.text-links %}
@@ -62,7 +62,9 @@
 		</div>
 	{% endif %}
 	
-	<hr>
+	{% if site.data.bojekylls.site-footer.include-social-icons or site.data.bojekylls.site-footer.include-text-links %}
+		<hr>
+	{% endif %}
 	
 	{% if site.data.bojekylls.site-footer.line1-html %}
 		<div class="gs-bjk-site-footer-line1">
